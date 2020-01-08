@@ -6,17 +6,13 @@ A portion of your grade will be based on your team-working ability. Please see t
 
 [https://docs.google.com/document/d/1SmfHAwjDHVRmcXyoF1LsWU5OpOC6ok5L-1sKakPQJjM/edit?usp=sharing](https://docs.google.com/document/d/1SmfHAwjDHVRmcXyoF1LsWU5OpOC6ok5L-1sKakPQJjM/edit?usp=sharing)
 
-You will also be following the SCRUM process and assuming roles of either Product Owner, Scrum Master, or QA Tester. Please see this document for more details:
-
-[https://docs.google.com/document/d/1k9kMzUTTIMKhR_SciLpi87k5CeMMcSjdQHUyo8hX42Y/edit](https://docs.google.com/document/d/1k9kMzUTTIMKhR_SciLpi87k5CeMMcSjdQHUyo8hX42Y/edit)
-
 ### Learning Objectives
 
-- Practice building larger applications with React + Redux
-- Practice using react-router-dom or connected-react-router
+- Practice building larger applications with React
+- Practice using react-router-dom
 - Practice building a system architecture for an application
 - Practice reading and understanding a 3rd-party back-end API
-- Practice using a component library
+- Practice using a UI component library
 - Practice following SCRUM processes and understanding/practicing SCRUM roles
 - Practice communicating/working together as a team
 
