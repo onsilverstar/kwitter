@@ -6,7 +6,7 @@ A portion of your grade will be based on your team-working ability. Please see t
 
 [https://docs.google.com/document/d/1SmfHAwjDHVRmcXyoF1LsWU5OpOC6ok5L-1sKakPQJjM/edit?usp=sharing](https://docs.google.com/document/d/1SmfHAwjDHVRmcXyoF1LsWU5OpOC6ok5L-1sKakPQJjM/edit?usp=sharing)
 
-You will also be following the SCRUM process and although everyone will be a developer and individual congributor your team should account for the roles of Product Owner, Scrum Master, and QA Tester. Please see this document for more details:
+You will also be following the SCRUM process and although everyone will be a developer and individual contributor your team should account for the roles of Product Owner, Scrum Master, and QA Tester. Please see this document for more details:
 
 [https://docs.google.com/document/d/1k9kMzUTTIMKhR_SciLpi87k5CeMMcSjdQHUyo8hX42Y/edit](https://docs.google.com/document/d/1k9kMzUTTIMKhR_SciLpi87k5CeMMcSjdQHUyo8hX42Y/edit)
 
@@ -37,9 +37,7 @@ A starter scaffolding is provided here: [kwitter-starter](https://github.com/eri
 
 ## Submission
 
-1. GitHub repo url - this is the url that has your frontend kwitter project source code
-2. Heroku - this is the url that has your frontend kwitter project deployed to it
-3. heroku url - this is the url that has your copy of the backend 
-4. SCRUM board - this shows your scrum board which has tickets with descriptions and assignees. it could be a trello board or a gitlab project board or similar.
-5. Retro board/notes - this shows that your team discussed how to improve its process through notes about what went well/what went poorly/action items. it could be general notes or a funretro.io board.
-6. 5 lessons learned - each lesson should be a couple sentences which describe something significant you learned/experienced that will help you in the next group project to be more prepared. the whole team should contribute ideas for 5 lessons learned.
+- GitHub repo url - this is the url that has your frontend kwitter project source code
+- Heroku - this is the url that has your frontend kwitter project deployed to it
+- SCRUM board - this shows your scrum board which has tickets with descriptions and assignees. It could be a github project board or similar.
+- 5 lessons learned - each lesson should be a couple sentences which describe something significant you learned/experienced that will help you in the next group project to be more prepared. the whole team should contribute ideas for 5 lessons learned.
