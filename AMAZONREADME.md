@@ -35,10 +35,6 @@ We will specify the API you will be using to build your project, but the design,
 
 A starter scaffolding is provided here: [kwitter-starter](https://github.com/erics273/kwitter-starter)
 
-## Project Architecture
-
-[PETER FIXING](https://kenzie-academy.gitlab.io/se/fe/final-projects/assessment---kwitter-frontend/dependencygraph.html)
-
 ## Submission
 
 1. GitHub repo url - this is the url that has your frontend kwitter project source code
