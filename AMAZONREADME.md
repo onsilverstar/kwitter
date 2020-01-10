@@ -33,7 +33,7 @@ We will specify the API you will be using to build your project, but the design,
 
 7. Begin creating/using components to establish a general foundation of your app
 
-A starter scaffolding is provided here: [placeholder](placeholder)
+A starter scaffolding is provided here: [kwitter-starter](https://github.com/erics273/kwitter-starter)
 
 ## Project Architecture
 
