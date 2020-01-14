@@ -24,7 +24,7 @@ You will also be following the SCRUM process and although everyone will be a dev
 
 We will specify the API you will be using to build your project, but the design, layout, and component architecture will be up to you
 
-1. Familiarize yourself with the API
+1. Familiarize yourself with the [SocialApp API](https://socialapp-api.herokuapp.com)
 2. Mock out possible screens
 3. Break screens out into possible component names
 4. Discuss at what point will you hit the API, use local state, how components will get the props they need to render
@@ -33,11 +33,13 @@ We will specify the API you will be using to build your project, but the design,
 
 7. Begin creating/using components to establish a general foundation of your app
 
-A starter scaffolding is provided here: [kwitter-starter](https://github.com/erics273/kwitter-starter)
+A starter scaffolding is provided here: [SocialApp-starter](https://github.com/erics273/socialapp-starter)
+
+The API you will communicate with is the [SocialApp API](https://socialapp-api.herokuapp.com)
 
 ## Submission
 
-- GitHub repo url - this is the url that has your frontend kwitter project source code
-- Heroku - this is the url that has your frontend kwitter project deployed to it
+- GitHub repo url - this is the url that has your frontend SocialApp project source code
+- Heroku - this is the url that has your frontend SocialApp project deployed to it
 - SCRUM board - this shows your scrum board which has tickets with descriptions and assignees. It could be a github project board or similar.
 - 5 lessons learned - each lesson should be a couple sentences which describe something significant you learned/experienced that will help you in the next group project to be more prepared. the whole team should contribute ideas for 5 lessons learned.
