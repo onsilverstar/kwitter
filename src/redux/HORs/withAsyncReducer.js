@@ -1,4 +1,4 @@
-const withAsyncReducer = ({ START, SUCCESS, FAIL }, reducer) => {
+const withAsyncReducer = ({ START, SUCCESS, FAIL }) => reducer => {
   return (state, action) => {
     switch (action.type) {
       case START:

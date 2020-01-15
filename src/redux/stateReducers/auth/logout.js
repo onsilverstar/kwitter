@@ -14,4 +14,4 @@ const logout = (state = initialState, action) => {
   }
 };
 
-export default withAsyncReducer(LOGOUT, logout);
+export default withAsyncReducer(LOGOUT)(logout);

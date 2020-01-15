@@ -37,4 +37,4 @@ const login = (
   }
 };
 
-export default withAsyncReducer(LOGIN, login);
+export default withAsyncReducer(LOGIN)(login);
