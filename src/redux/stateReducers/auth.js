@@ -1,50 +1,19 @@
 import { LOGIN, LOGOUT } from "../actionTypes";
-import { withAsyncReducer } from "../HORs";
+import { createReducer } from "@reduxjs/toolkit";
+import {
+  asyncCases,
+  asyncInitialState,
+  getInitStateFromStorage
+} from "./helpers";
 
-const initialState = {
-  result: null,
-  loading: false,
-  error: null
-};
-
-const getInitStateFromStorage = (key, initialState) => {
-  const storedState = JSON.parse(localStorage.getItem(key));
-
-  if (storedState) {
-    const unchangedInitialStateProps =
-      Object.keys(storedState).every(
-        property => initialState[property] !== undefined
-      ) &&
-      Object.keys(initialState).every(
-        property => storedState[property] !== undefined
-      );
-    if (unchangedInitialStateProps) {
-      return storedState;
-    }
+export const login = createReducer(
+  getInitStateFromStorage("login", asyncInitialState),
+  {
+    ...asyncCases(LOGIN),
+    [LOGOUT.SUCCESS]: (state, action) => asyncInitialState
   }
-  return initialState;
-};
+);
 
-const login = (
-  state = getInitStateFromStorage("login", initialState),
-  action
-) => {
-  switch (action.type) {
-    case LOGOUT.SUCCESS:
-      return { ...initialState };
-    default:
-      return state;
-  }
-};
-
-const logout = (state = initialState, action) => {
-  switch (action.type) {
-    default:
-      return state;
-  }
-};
-
-export default {
-  login: withAsyncReducer(LOGIN)(login),
-  logout: withAsyncReducer(LOGOUT)(logout)
-};
+export const logout = createReducer(asyncInitialState, {
+  ...asyncCases(LOGOUT)
+});
