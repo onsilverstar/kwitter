@@ -1,26 +1,16 @@
 import { createBrowserHistory } from "history";
-import { applyMiddleware, createStore } from "redux";
-import { routerMiddleware } from "connected-react-router";
 import createRootReducer from "./stateReducers";
-import thunk from "redux-thunk";
-import { composeWithDevTools } from "redux-devtools-extension";
-
+import { configureStore as _configureStore } from "@reduxjs/toolkit";
 export const history = createBrowserHistory({
   basename: process.env.PUBLIC_URL
 });
 
 export default function configureStore(preloadedState) {
-  const store = createStore(
-    createRootReducer(history), // root reducer with router state
+  const store = _configureStore({
+    reducer: createRootReducer(history),
     preloadedState,
-    composeWithDevTools(
-      applyMiddleware(
-        routerMiddleware(history), // for dispatching history actions
-        thunk
-        // ... other middlewares ...
-      )
-    )
-  );
+    devTools: process.env.NODE_ENV !== "production"
+  });
 
   store.subscribe(() => {
     localStorage.setItem("login", JSON.stringify(store.getState().auth.login));
