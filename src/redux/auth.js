@@ -5,9 +5,9 @@ import {
   getInitStateFromStorage,
   asyncInitialState,
   asyncCases,
-  createActions
+  createActions,
+  createReducer
 } from "./helpers";
-import { createReducer } from "@reduxjs/toolkit";
 
 const url = domain + "/auth";
 

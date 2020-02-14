@@ -1,5 +1,7 @@
 import { createAction } from "@reduxjs/toolkit";
 
+export { createReducer } from "@reduxjs/toolkit";
+
 export const domain = "https://kwitter-api.herokuapp.com";
 //export const domain = "http://localhost:3000";
 
