@@ -4,9 +4,7 @@ import { LOGIN, LOGOUT } from "../actionTypes";
 const url = domain + "/auth";
 
 export const login = loginData => dispatch => {
-  dispatch({
-    type: LOGIN.START
-  });
+  dispatch(LOGIN.START());
 
   return fetch(url + "/login", {
     method: "POST",
@@ -14,21 +12,12 @@ export const login = loginData => dispatch => {
     body: JSON.stringify(loginData)
   })
     .then(handleJsonResponse)
-    .then(result => {
-      return dispatch({
-        type: LOGIN.SUCCESS,
-        payload: result
-      });
-    })
-    .catch(err => {
-      return Promise.reject(dispatch({ type: LOGIN.FAIL, payload: err }));
-    });
+    .then(result => dispatch(LOGIN.SUCCESS(result)))
+    .catch(err => Promise.reject(dispatch(LOGIN.FAIL(err))));
 };
 
 export const logout = () => (dispatch, getState) => {
-  dispatch({
-    type: LOGOUT.START
-  });
+  dispatch(LOGOUT.START());
 
   const token = getState().auth.login.result.token;
 
@@ -37,15 +26,6 @@ export const logout = () => (dispatch, getState) => {
     headers: { Authorization: "Bearer " + token, ...jsonHeaders }
   })
     .then(handleJsonResponse)
-    .then(result => {
-      return dispatch({
-        type: LOGOUT.SUCCESS,
-        payload: result
-      });
-    })
-    .catch(err => {
-      return Promise.reject(
-        dispatch({ type: LOGOUT.FAIL, payload: err.message })
-      );
-    });
+    .then(result => dispatch(LOGOUT.SUCCESS(result)))
+    .catch(err => Promise.reject(dispatch(LOGOUT.FAIL(err))));
 };

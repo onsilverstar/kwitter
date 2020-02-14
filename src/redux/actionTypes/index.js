@@ -1,11 +1,10 @@
-const createActionTypes = actionName => {
-  const ACTIONNAME = actionName.toUpperCase();
-  return {
-    START: ACTIONNAME + ".START",
-    SUCCESS: ACTIONNAME + ".SUCCESS",
-    FAIL: ACTIONNAME + ".FAIL"
-  };
-};
+import { createAction } from "@reduxjs/toolkit";
 
-export const LOGIN = createActionTypes("LOGIN");
-export const LOGOUT = createActionTypes("LOGOUT");
+const createActions = actionName => ({
+  START: createAction(actionName + "/start"),
+  SUCCESS: createAction(actionName + "/success"),
+  FAIL: createAction(actionName + "/fail")
+});
+
+export const LOGIN = createActions("login");
+export const LOGOUT = createActions("logout");
