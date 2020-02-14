@@ -1,8 +1,17 @@
-import { domain, jsonHeaders, handleJsonResponse } from "./constants";
-import { LOGIN, LOGOUT } from "../actionTypes";
+import {
+  domain,
+  jsonHeaders,
+  handleJsonResponse,
+  getInitStateFromStorage,
+  asyncInitialState,
+  asyncCases,
+  createActions
+} from "./helpers";
+import { createReducer } from "@reduxjs/toolkit";
 
 const url = domain + "/auth";
 
+const LOGIN = createActions("login");
 export const login = loginData => dispatch => {
   dispatch(LOGIN.START());
 
@@ -16,6 +25,7 @@ export const login = loginData => dispatch => {
     .catch(err => Promise.reject(dispatch(LOGIN.FAIL(err))));
 };
 
+const LOGOUT = createActions("logout");
 export const logout = () => (dispatch, getState) => {
   dispatch(LOGOUT.START());
 
@@ -28,4 +38,14 @@ export const logout = () => (dispatch, getState) => {
     .then(handleJsonResponse)
     .then(result => dispatch(LOGOUT.SUCCESS(result)))
     .catch(err => Promise.reject(dispatch(LOGOUT.FAIL(err))));
+};
+
+export const reducers = {
+  login: createReducer(getInitStateFromStorage("login", asyncInitialState), {
+    ...asyncCases(LOGIN),
+    [LOGOUT.SUCCESS]: (state, action) => asyncInitialState
+  }),
+  logout: createReducer(asyncInitialState, {
+    ...asyncCases(LOGOUT)
+  })
 };

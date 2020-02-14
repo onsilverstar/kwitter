@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from ".";
 import "./Menu.css";
 import { connect } from "../HOCs";
-import { logout } from "../../redux/actionCreators";
+import { logout } from "../../redux";
 
 class Menu extends React.Component {
   handleLogout = event => {

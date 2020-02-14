@@ -1,7 +1,7 @@
 import React from "react";
 import { Spinner } from ".";
 import { connect } from "../HOCs";
-import { login } from "../../redux/actionCreators";
+import { login } from "../../redux";
 import "./LoginForm.css";
 
 class LoginForm extends React.Component {
