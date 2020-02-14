@@ -38,7 +38,7 @@ A starter scaffolding is provided here: [https://gitlab.com/kenzie-academy/se/fe
 
 ## Project Architecture
 
-[Dependency Graph](./dependencygraph.html)
+[Dependency Graph](https://kenzie-academy.gitlab.io/se/fe/final-projects/assessment---kwitter-frontend/dependencygraph.html)
 
 ## Submission
 
