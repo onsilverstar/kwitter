@@ -1,7 +1,7 @@
 import React from "react";
-import { Link } from ".";
+import { Link } from "react-router-dom";
 import "./Menu.css";
-import { connect } from "../HOCs";
+import { connect } from "react-redux";
 import { logout } from "../../redux";
 
 class Menu extends React.Component {

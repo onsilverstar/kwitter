@@ -1,6 +1,6 @@
 import React from "react";
-import { Spinner } from ".";
-import { connect } from "../HOCs";
+import Spinner from "react-spinkit";
+import { connect } from "react-redux";
 import { login } from "../../redux";
 import "./LoginForm.css";
 
