@@ -43,7 +43,7 @@ export const logout = () => (dispatch, getState) => {
 export const reducers = {
   login: createReducer(getInitStateFromStorage("login", asyncInitialState), {
     ...asyncCases(LOGIN),
-    [LOGOUT.SUCCESS]: (state, action) => asyncInitialState
+    [LOGOUT.SUCCESS.toString()]: (state, action) => asyncInitialState
   }),
   logout: createReducer(asyncInitialState, {
     ...asyncCases(LOGOUT)

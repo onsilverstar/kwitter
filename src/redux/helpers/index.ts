@@ -19,10 +19,14 @@ export const handleJsonResponse = res => {
   });
 };
 
+// see https://redux-toolkit.js.org/usage/usage-with-typescript/#createaction
+function withPayloadType<T>() {
+  return (t: T) => ({ payload: t });
+}
 export const createActions = actionName => ({
   START: createAction(actionName + "/start"),
-  SUCCESS: createAction(actionName + "/success"),
-  FAIL: createAction(actionName + "/fail")
+  SUCCESS: createAction(actionName + "/success", withPayloadType<any>()),
+  FAIL: createAction(actionName + "/fail", withPayloadType<any>())
 });
 
 export const asyncInitialState = {
