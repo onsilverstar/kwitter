@@ -1,6 +1,7 @@
 import React from "react";
 import { Spinner } from ".";
-import { withAsyncAction } from "../HOCs";
+import { connect } from "../HOCs";
+import { login } from "../../redux/actionCreators";
 import "./LoginForm.css";
 
 class LoginForm extends React.Component {
@@ -46,4 +47,11 @@ class LoginForm extends React.Component {
   }
 }
 
-export default withAsyncAction("auth", "login")(LoginForm);
+export default connect(
+  state => ({
+    result: state.auth.login.result,
+    loading: state.auth.login.loading,
+    error: state.auth.login.error
+  }),
+  { login }
+)(LoginForm);

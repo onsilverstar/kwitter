@@ -1,5 +1,5 @@
-import { LOGIN, LOGOUT } from "../../actionTypes";
-import { withAsyncReducer } from "../../HORs";
+import { LOGIN, LOGOUT } from "../actionTypes";
+import { withAsyncReducer } from "../HORs";
 
 const initialState = {
   result: null,
@@ -37,4 +37,14 @@ const login = (
   }
 };
 
-export default withAsyncReducer(LOGIN)(login);
+const logout = (state = initialState, action) => {
+  switch (action.type) {
+    default:
+      return state;
+  }
+};
+
+export default {
+  login: withAsyncReducer(LOGIN)(login),
+  logout: withAsyncReducer(LOGOUT)(logout)
+};
