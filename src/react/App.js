@@ -1,19 +1,16 @@
 import React from "react";
-import { Switch, Route } from "./components";
-import pages from "./pages";
+import { Switch, Route } from "react-router-dom";
+import Home from "./Home";
+import Profile from "./Profile";
+import NotFound from "./NotFound";
 
 class App extends React.Component {
   render() {
     return (
       <Switch>
-        {Object.entries(pages).map(([routeName, routeObj]) => (
-          <Route
-            key={routeName}
-            exact
-            path={routeObj.path}
-            component={routeObj.component}
-          />
-        ))}
+        <Route exact path="/" component={Home} />
+        <Route exact path="/profiles/:username" component={Profile} />
+        <Route path="*" component={NotFound} />
       </Switch>
     );
   }

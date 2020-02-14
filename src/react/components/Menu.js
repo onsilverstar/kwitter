@@ -1,7 +1,8 @@
 import React from "react";
-import { Link } from ".";
+import { Link } from "react-router-dom";
 import "./Menu.css";
-import { withAsyncAction } from "../HOCs";
+import { connect } from "react-redux";
+import { logout } from "../../redux";
 
 class Menu extends React.Component {
   handleLogout = event => {
@@ -26,4 +27,11 @@ class Menu extends React.Component {
   }
 }
 
-export default withAsyncAction("auth", "logout")(Menu);
+export default connect(
+  state => ({
+    result: state.auth.logout.result,
+    loading: state.auth.logout.loading,
+    error: state.auth.logout.error
+  }),
+  { logout }
+)(Menu);
