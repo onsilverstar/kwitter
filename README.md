@@ -24,7 +24,7 @@ You will also be following the SCRUM process and assuming roles of either Produc
 
 We will specify the API you will be using to build your project, but the design, layout, and component architecture will be up to you
 
-1. Familiarize yourself with the API
+1. Familiarize yourself with [the API](https://kwitter-api.herokuapp.com/docs/)
 2. Mock out possible screens
 3. Break screens out into possible component names
 4. Discuss at what point will you hit the API, store data in your Redux store, use local state, how components will get the props they need to render
