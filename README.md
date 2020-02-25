@@ -25,13 +25,11 @@ You will also be following the SCRUM process and, although everyone will be a de
 We will specify the API you will be using to build your project, but the design, layout, and component architecture will be up to you
 
 1. Familiarize yourself with [the API](https://kwitter-api.herokuapp.com/docs/)
-2. Mock out possible screens
-3. Break screens out into possible component names
+2. Mock out possible pages
+3. Break pages out into possible component names
 4. Discuss at what point will you hit the API, store data in your Redux store, use local state, how components will get the props they need to render
 5. Discuss and research what component library you would like to use and which components you will use
-
 6. We recommend trialing some components to get comfortable with how they work and which components you could use for which parts of your application.
-
 7. Begin creating/using components to establish a general foundation of your app
 
 A starter scaffolding is provided here: [https://gitlab.com/kenzie-academy/se/fe/final-projects/assessment---kwitter-frontend](https://gitlab.com/kenzie-academy/se/fe/final-projects/assessment---kwitter-frontend)
