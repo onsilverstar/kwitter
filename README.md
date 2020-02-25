@@ -6,7 +6,7 @@ A portion of your grade will be based on your team-working ability. Please see t
 
 [https://docs.google.com/document/d/1SmfHAwjDHVRmcXyoF1LsWU5OpOC6ok5L-1sKakPQJjM/edit?usp=sharing](https://docs.google.com/document/d/1SmfHAwjDHVRmcXyoF1LsWU5OpOC6ok5L-1sKakPQJjM/edit?usp=sharing)
 
-You will also be following the SCRUM process and assuming roles of either Product Owner, Scrum Master, or QA Tester. Please see this document for more details:
+You will also be following the SCRUM process and, although everyone will be a developer and individual contributor, your team should account for the roles of Product Owner, Scrum Master, and QA Tester. Please see this document for more details:
 
 [https://docs.google.com/document/d/1k9kMzUTTIMKhR_SciLpi87k5CeMMcSjdQHUyo8hX42Y/edit](https://docs.google.com/document/d/1k9kMzUTTIMKhR_SciLpi87k5CeMMcSjdQHUyo8hX42Y/edit)
 
