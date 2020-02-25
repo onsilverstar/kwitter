@@ -42,8 +42,8 @@ A starter scaffolding is provided here: [https://gitlab.com/kenzie-academy/se/fe
 
 ## Submission
 
-1. gitlab repo url - this is the url that has your frontend kwitter project source code
-2. gitlab pages url - this is the url that has your frontend kwitter project deployed to it
-3. heroku url - this is the url that has your copy of the backend kwitter api deployed to it
-4. SCRUM board - this shows your scrum board which has tickets with descriptions and assignees. it could be a trello board or a gitlab project board or similar.
+1. git repo url - this is the url that has your frontend kwitter project source code
+2. heroku frontend url - this is the url that has your frontend kwitter project deployed to it
+3. heroku backend url - this is the url that has your copy of the backend kwitter api deployed to it
+4. SCRUM board - this shows your scrum board which has tickets with descriptions and assignees. it could be a trello board or a gitlab/github project board or similar.
 5. 5 lessons learned - each lesson should be a couple sentences which describe something significant you learned/experienced that will help you in the next group project to be more prepared. the whole team should contribute ideas for 5 lessons learned.
