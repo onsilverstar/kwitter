@@ -27,9 +27,11 @@ _They are also interested in establishing the look and feel of their visual bran
 - Practice following SCRUM processes and understanding/practicing SCRUM roles
 - Practice communicating/working together as a team
 
-## Getting Started...
-
 A starter scaffolding is provided [here](https://gitlab.com/kenzie-academy/se/fe/final-projects/assessment---kwitter-frontend)
+
+An overview of the starting project architecture can be found in this [dependency graph](https://kenzie-academy.gitlab.io/se/fe/final-projects/assessment---kwitter-frontend/dependencygraph.html)
+
+## Getting Started...
 
 1. Create a SCRUM board(trello, github/gitlab project board, etc.) 
     - [trello scrum example](https://trello.com/b/0xzkRjTH/scrum-project-management-board)
@@ -41,9 +43,7 @@ A starter scaffolding is provided [here](https://gitlab.com/kenzie-academy/se/fe
 7. Discuss and research what component library you would like to use and explore its components
 8. Begin creating and using components to establish a general foundation for your app
 
-## Starter Scaffolding Architecture
 
-[Dependency Graph](https://kenzie-academy.gitlab.io/se/fe/final-projects/assessment---kwitter-frontend/dependencygraph.html)
 
 ## Submission
 
