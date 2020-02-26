@@ -8,7 +8,7 @@ A portion of your grade will be based on your team-working ability. Please see [
 for guidelines.
 
 You will also be following the SCRUM process and, although everyone will be a developer and individual contributor, your team should account for the roles of Product Owner, 
-Scrum Master, and QA Tester. Please see [this document](https://docs.google.com/document/d/1k9kMzUTTIMKhR_SciLpi87k5CeMMcSjdQHUyo8hX42Y/edit) for more details. Your client has
+Scrum Master, and QA Tester. Please see [this document](https://gitlab.com/kenzie-academy/se_public_files/scrum-guidelines/-/blob/master/README.md) for more details. Your client has
 asked for the following:
 
 ```
