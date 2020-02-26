@@ -31,15 +31,16 @@ They are also interested in establishing the look and feel of their visual brand
 
 ## Getting Started...
 
-1. Familiarize yourself with [the API](https://kwitter-api.herokuapp.com/docs/)
-2. Mock out possible pages
-3. Break pages out into possible component names
-4. Discuss at what point will you hit the API, store data in your Redux store, use local state, how components will get the props they need to render
-5. Discuss and research what component library you would like to use and which components you will use
-6. We recommend trialing some components to get comfortable with how they work and which components you could use for which parts of your application.
-7. Begin creating/using components to establish a general foundation of your app
-
 A starter scaffolding is provided [here](https://gitlab.com/kenzie-academy/se/fe/final-projects/assessment---kwitter-frontend)
+
+1. Create a SCRUM board(trello, github/gitlab project board, etc.) 
+    - [trello scrum example](https://trello.com/b/0xzkRjTH/scrum-project-management-board)
+2. Familiarize yourself with [the API](https://kwitter-api.herokuapp.com/docs/)
+3. Create mock ups for possible pages
+4. Break each page out into possible components
+5. Discuss API endpoints you'll hit, how you'll store data in your Redux store, when to utilize local component state
+6. Discuss and research what component library you would like to use and explore that libraries components
+7. Begin creating/using components to establish a general foundation of your app
 
 ## Project Architecture
 
