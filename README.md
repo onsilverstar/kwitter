@@ -9,7 +9,7 @@ for guidelines.
 You will also be following the Scrum process and, although everyone will be a developer and individual contributor, your team should account for the roles of Product Owner, 
 Scrum Master, and QA Tester. Please see [this document](https://gitlab.com/kenzie-academy/se_public_files/scrum-guidelines/-/blob/master/README.md) for more details. 
 
-Your client has asked for the following:
+Client memo:
 
 _The logged in user's experience is the core of this application. So the client wants to establish this core experience first._
 _Since this is a social application, the client would like the application to emphasize engagement and engaging with other users as much as possible._
