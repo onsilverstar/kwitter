@@ -2,13 +2,13 @@
 
 You will be working in teams to make a clone of a common [micro-blogging](https://en.wikipedia.org/wiki/Microblogging) platform. You will be given a back-end API for you to form your front-end application around. The API will include endpoints relating to authentication, users, messages, and likes. Your project must incorporate a majority of the endpoints given in the API.
 
-A portion of your grade will be based on your team-working ability. Please see this document for guidelines:
+A portion of your grade will be based on your team-working ability. Please see [this document](https://docs.google.com/document/d/1elhElei7KiAchK9kERHty2MUMPYFWJZbEYmi5L12GB4/edit?usp=sharing)
+for guidelines.
 
-[https://docs.google.com/document/d/1SmfHAwjDHVRmcXyoF1LsWU5OpOC6ok5L-1sKakPQJjM/edit?usp=sharing](https://docs.google.com/document/d/1SmfHAwjDHVRmcXyoF1LsWU5OpOC6ok5L-1sKakPQJjM/edit?usp=sharing)
+You will also be following the SCRUM process and, although everyone will be a developer and individual contributor, your team should account for the roles of Product Owner, 
+Scrum Master, and QA Tester. Please see [this document](https://docs.google.com/document/d/1k9kMzUTTIMKhR_SciLpi87k5CeMMcSjdQHUyo8hX42Y/edit) for more details.
 
-You will also be following the SCRUM process and, although everyone will be a developer and individual contributor, your team should account for the roles of Product Owner, Scrum Master, and QA Tester. Please see this document for more details:
 
-[https://docs.google.com/document/d/1k9kMzUTTIMKhR_SciLpi87k5CeMMcSjdQHUyo8hX42Y/edit](https://docs.google.com/document/d/1k9kMzUTTIMKhR_SciLpi87k5CeMMcSjdQHUyo8hX42Y/edit)
 
 ### Learning Objectives
 
