@@ -6,7 +6,7 @@ The API will include endpoints relating to authentication, users, messages, and 
 A portion of your grade will be based on your team-working ability. Please see [this document](https://gitlab.com/kenzie-academy/se_public_files/team-guidelines/-/tree/master)
 for guidelines.
 
-You will also be following the SCRUM process and, although everyone will be a developer and individual contributor, your team should account for the roles of Product Owner, 
+You will also be following the Scrum process and, although everyone will be a developer and individual contributor, your team should account for the roles of Product Owner, 
 Scrum Master, and QA Tester. Please see [this document](https://gitlab.com/kenzie-academy/se_public_files/scrum-guidelines/-/blob/master/README.md) for more details. Your client has
 asked for the following:
 
@@ -31,7 +31,7 @@ starting project architecture can be found in this [dependency graph](https://ke
 
 ## Getting Started...
 
-1. Create a SCRUM board (trello, github/gitlab project board, etc.) 
+1. Create a Scrum board (trello, github/gitlab project board, etc.) 
     - [trello scrum example](https://trello.com/b/0xzkRjTH/scrum-project-management-board)
 2. Plan out 1 to 2 week sprint goals.
 3. Familiarize yourself with [the API](https://kwitter-api.herokuapp.com/docs/)
