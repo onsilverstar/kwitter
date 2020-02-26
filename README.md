@@ -1,8 +1,7 @@
 ## Overview
 
-You will be working in teams to make a clone of a common [micro-blogging](https://en.wikipedia.org/wiki/Microblogging) platform. 
-You will be given a back-end API for you to form your front-end application around. The API will include endpoints relating to authentication, users, 
-messages, and likes. Your project must incorporate a majority of the endpoints given in the API.
+You will be working in teams to make a clone of a common micro-blogging platform. You will be given a back-end API for you to form your front-end application around. 
+The API will include endpoints relating to authentication, users, messages, and likes. Your project must incorporate a majority of the endpoints given in the API.
 
 A portion of your grade will be based on your team-working ability. Please see [this document](https://gitlab.com/kenzie-academy/se_public_files/team-guidelines/-/tree/master)
 for guidelines.
