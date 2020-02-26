@@ -27,9 +27,8 @@ _They are also interested in establishing the look and feel of their visual bran
 - Practice following SCRUM processes and understanding/practicing SCRUM roles
 - Practice communicating/working together as a team
 
-A starter scaffolding is provided [here](https://gitlab.com/kenzie-academy/se/fe/final-projects/assessment---kwitter-frontend)
-
-An overview of the starting project architecture can be found in this [dependency graph](https://kenzie-academy.gitlab.io/se/fe/final-projects/assessment---kwitter-frontend/dependencygraph.html)
+A starter scaffolding is provided [here.](https://gitlab.com/kenzie-academy/se/fe/final-projects/assessment---kwitter-frontend) An overview of the 
+starting project architecture can be found in this [dependency graph](https://kenzie-academy.gitlab.io/se/fe/final-projects/assessment---kwitter-frontend/dependencygraph.html)
 
 ## Getting Started...
 
