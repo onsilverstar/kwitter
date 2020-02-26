@@ -39,7 +39,7 @@ A starter scaffolding is provided [here](https://gitlab.com/kenzie-academy/se/fe
 3. Familiarize yourself with [the API](https://kwitter-api.herokuapp.com/docs/)
 4. Create mock ups for possible pages
 5. Break each page out into possible components
-6. Discuss API endpoints you'll hit, how you'll store data in your Redux store, when to utilize local component state
+6. Discuss API endpoints you'll hit, how you'll store data in your Redux store, and which components will need access to the store
 7. Discuss and research what component library you would like to use and explore its components
 8. Begin creating and using components to establish a general foundation for your app
 
