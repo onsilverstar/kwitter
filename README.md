@@ -11,11 +11,9 @@ Scrum Master, and QA Tester. Please see [this document](https://gitlab.com/kenzi
 
 Client memo:
 
-_The logged in user's experience is the core of this application. So the client wants to establish this core experience first._
-_Since this is a social application, the client would like the application to emphasize engagement and engaging with other users as much as possible._
-_They are also interested in establishing the look and feel of their visual brand early so that it can be reused throughout the rest of the application._
-
-
+_The logged in user's experience is the core of this application. So we want to establish this core experience first._
+_Since this is a social application, we would like the application to emphasize engagement and engaging with other users as much as possible._
+_We are also interested in establishing the look and feel of our visual brand early so that it can be reused throughout the rest of the application._
 
 ## Learning Objectives
 
