@@ -33,7 +33,7 @@ An overview of the starting project architecture can be found in this [dependenc
 
 ## Getting Started...
 
-1. Create a SCRUM board(trello, github/gitlab project board, etc.) 
+1. Create a SCRUM board (trello, github/gitlab project board, etc.) 
     - [trello scrum example](https://trello.com/b/0xzkRjTH/scrum-project-management-board)
 2. Plan out 1 to 2 week sprint goals.
 3. Familiarize yourself with [the API](https://kwitter-api.herokuapp.com/docs/)
