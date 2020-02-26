@@ -41,7 +41,7 @@ A starter scaffolding is provided [here](https://gitlab.com/kenzie-academy/se/fe
 7. Discuss and research what component library you would like to use and explore its components
 8. Begin creating and using components to establish a general foundation for your app
 
-## Project Architecture
+## Starter Scaffolding Architecture
 
 [Dependency Graph](https://kenzie-academy.gitlab.io/se/fe/final-projects/assessment---kwitter-frontend/dependencygraph.html)
 
