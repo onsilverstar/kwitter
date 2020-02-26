@@ -43,8 +43,6 @@ An overview of the starting project architecture can be found in this [dependenc
 7. Discuss and research what component library you would like to use and explore its components
 8. Begin creating and using components to establish a general foundation for your app
 
-
-
 ## Submission
 
 1. git repo url - this is the url that has your frontend kwitter project source code
