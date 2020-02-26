@@ -1,16 +1,25 @@
 ## Overview
 
-You will be working in teams to make a clone of a common [micro-blogging](https://en.wikipedia.org/wiki/Microblogging) platform. You will be given a back-end API for you to form your front-end application around. The API will include endpoints relating to authentication, users, messages, and likes. Your project must incorporate a majority of the endpoints given in the API.
+You will be working in teams to make a clone of a common [micro-blogging](https://en.wikipedia.org/wiki/Microblogging) platform. 
+You will be given a back-end API for you to form your front-end application around. The API will include endpoints relating to authentication, users, 
+messages, and likes. Your project must incorporate a majority of the endpoints given in the API.
 
 A portion of your grade will be based on your team-working ability. Please see [this document](https://gitlab.com/kenzie-academy/se_public_files/team-guidelines/-/tree/master)
 for guidelines.
 
 You will also be following the SCRUM process and, although everyone will be a developer and individual contributor, your team should account for the roles of Product Owner, 
-Scrum Master, and QA Tester. Please see [this document](https://docs.google.com/document/d/1k9kMzUTTIMKhR_SciLpi87k5CeMMcSjdQHUyo8hX42Y/edit) for more details.
+Scrum Master, and QA Tester. Please see [this document](https://docs.google.com/document/d/1k9kMzUTTIMKhR_SciLpi87k5CeMMcSjdQHUyo8hX42Y/edit) for more details. Your client has
+asked for the following:
+
+```
+The logged in user's experience is the core of this application. So the client wants to establish this core experience first. 
+Since this is a social application, the client would like the application to emphasize engagement and engaging with other users as much as possible.
+They are also interested in establishing the look and feel of their visual brand early so that it can be reused throughout the rest of the application.
+```
 
 
 
-### Learning Objectives
+## Learning Objectives
 
 - Practice building larger applications with React + Redux
 - Practice using react-router-dom or connected-react-router
@@ -22,8 +31,6 @@ Scrum Master, and QA Tester. Please see [this document](https://docs.google.com/
 
 ## Getting Started...
 
-We will specify the API you will be using to build your project, but the design, layout, and component architecture will be up to you
-
 1. Familiarize yourself with [the API](https://kwitter-api.herokuapp.com/docs/)
 2. Mock out possible pages
 3. Break pages out into possible component names
@@ -32,7 +39,7 @@ We will specify the API you will be using to build your project, but the design,
 6. We recommend trialing some components to get comfortable with how they work and which components you could use for which parts of your application.
 7. Begin creating/using components to establish a general foundation of your app
 
-A starter scaffolding is provided here: [https://gitlab.com/kenzie-academy/se/fe/final-projects/assessment---kwitter-frontend](https://gitlab.com/kenzie-academy/se/fe/final-projects/assessment---kwitter-frontend)
+A starter scaffolding is provided [here](https://gitlab.com/kenzie-academy/se/fe/final-projects/assessment---kwitter-frontend)
 
 ## Project Architecture
 
