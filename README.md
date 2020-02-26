@@ -35,12 +35,13 @@ A starter scaffolding is provided [here](https://gitlab.com/kenzie-academy/se/fe
 
 1. Create a SCRUM board(trello, github/gitlab project board, etc.) 
     - [trello scrum example](https://trello.com/b/0xzkRjTH/scrum-project-management-board)
-2. Familiarize yourself with [the API](https://kwitter-api.herokuapp.com/docs/)
-3. Create mock ups for possible pages
-4. Break each page out into possible components
-5. Discuss API endpoints you'll hit, how you'll store data in your Redux store, when to utilize local component state
-6. Discuss and research what component library you would like to use and explore that libraries components
-7. Begin creating/using components to establish a general foundation of your app
+2. Plan out 1 - 2 week sprint goals.
+3. Familiarize yourself with [the API](https://kwitter-api.herokuapp.com/docs/)
+4. Create mock ups for possible pages
+5. Break each page out into possible components
+6. Discuss API endpoints you'll hit, how you'll store data in your Redux store, when to utilize local component state
+7. Discuss and research what component library you would like to use and explore its components
+8. Begin creating and using components to establish a general foundation for your app
 
 ## Project Architecture
 
@@ -52,4 +53,5 @@ A starter scaffolding is provided [here](https://gitlab.com/kenzie-academy/se/fe
 2. heroku frontend url - this is the url for your front-end deployment (we will walk you through heroku deployment)
 3. heroku backend url - this is the url for your copy of the backend kwitter api deployment (we will walk you through heroku deployment)
 4. SCRUM board - this shows your scrum board which has tickets with descriptions and assignees. it could be a trello board or a gitlab/github project board or similar.
-5. Retro board/notes - this shows that your team discussed how to improve its process through notes about what went well/what went poorly/action items. it could be general notes or a funretro.io board.
+5. Retro board/notes - this shows that your team discussed how to improve its process through notes about what went well/what went poorly/action items. 
+it could be general notes or a funretro.io board.
