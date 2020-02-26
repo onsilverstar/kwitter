@@ -27,7 +27,7 @@ _They are also interested in establishing the look and feel of their visual bran
 - Practice communicating/working together as a team
 
 An optional starter project is provided [here.](https://gitlab.com/kenzie-academy/se/fe/final-projects/assessment---kwitter-frontend) An overview of the 
-starting project architecture can be found in this [dependency graph](https://kenzie-academy.gitlab.io/se/fe/final-projects/assessment---kwitter-frontend/dependencygraph.html)
+starting project architecture can be found in [this dependency graph](https://kenzie-academy.gitlab.io/se/fe/final-projects/assessment---kwitter-frontend/dependencygraph.html)
 
 ## Getting Started...
 
