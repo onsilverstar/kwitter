@@ -23,7 +23,7 @@ _They are also interested in establishing the look and feel of their visual bran
 - Practice building a system architecture for an application
 - Practice reading and understanding a 3rd-party back-end API
 - Practice using a component library
-- Practice following SCRUM processes and understanding/practicing SCRUM roles
+- Practice following Scrum processes and performing Scrum roles
 - Practice communicating/working together as a team
 
 An optional starter project is provided [here.](https://gitlab.com/kenzie-academy/se/fe/final-projects/assessment---kwitter-frontend) An overview of the 
