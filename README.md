@@ -32,7 +32,7 @@ starting scaffolding architecture can be found in [this dependency graph](https:
 
 1. Create a Scrum board (trello, github/gitlab project board, etc.) 
     - [trello scrum example](https://trello.com/b/0xzkRjTH/scrum-project-management-board)
-2. Plan out 1 to 2 week sprint goals.
+2. Plan out your first week sprint goals.
 3. Familiarize yourself with [the API](https://kwitter-api.herokuapp.com/docs/)
 4. Create mock ups for possible pages
 5. Break each page out into possible components
