@@ -2,9 +2,20 @@ import React from "react";
 import Spinner from "react-spinkit";
 import { connect } from "react-redux";
 import { register } from "../../redux";
+import "./RegistrationForm.css";
 
 class RegistrationForm extends React.Component {
   state = { username: "", displayName: "", password: "" };
+
+  handleRegistration = e => {
+    e.preventDefault();
+    this.props.register(this.state);
+  };
+
+  handleChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+
   render() {
     const { loading, error } = this.props;
     return (
@@ -18,10 +29,10 @@ class RegistrationForm extends React.Component {
             required
             onChange={this.handleChange}
           />
-          <label htmlFor="displayname">Display Name</label>
+          <label htmlFor="displayName">Display Name</label>
           <input
             type="text"
-            name="displayname"
+            name="displayName"
             required
             onChange={this.handleChange}
           />

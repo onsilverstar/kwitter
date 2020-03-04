@@ -15,7 +15,7 @@ const REGISTER = createActions("register");
 export const register = registerData => dispatch => {
   dispatch(REGISTER.START());
 
-  return fetch(url + "/users", {
+  return fetch(domain + "/users", {
     method: "POST",
     headers: jsonHeaders,
     body: JSON.stringify(registerData)

@@ -1,6 +1,6 @@
 import React from "react";
 import { Menu } from "./components";
-import RegistrationForm from "./components/Registration";
+import RegistrationForm from "./components/RegistrationForm";
 
 class Register extends React.Component {
   render() {
