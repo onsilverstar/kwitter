@@ -7,7 +7,7 @@ class Home extends React.Component {
     return (
       <>
         <Menu />
-        <h2>Your favorite microblogging platform-Mike-Branch</h2>
+        <h2>Your favorite microblogging platform-Message Feed Branch</h2>
         <h3>Login to your account below.</h3>
         <LoginForm />
       </>
