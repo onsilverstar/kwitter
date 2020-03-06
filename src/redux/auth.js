@@ -12,6 +12,7 @@ import {
 const url = domain + "/auth";
 
 const REGISTER = createActions("register");
+
 export const register = registerData => dispatch => {
   dispatch(REGISTER.START());
 
@@ -21,7 +22,9 @@ export const register = registerData => dispatch => {
     body: JSON.stringify(registerData)
   })
     .then(handleJsonResponse)
-    .then(result => dispatch(REGISTER.SUCCESS(result)))
+    .then(result => {
+      dispatch(REGISTER.SUCCESS(result));
+    })
     .catch(err => Promise.reject(dispatch(REGISTER.FAIL(err))));
 };
 

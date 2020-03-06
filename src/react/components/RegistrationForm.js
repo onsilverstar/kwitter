@@ -10,6 +10,9 @@ class RegistrationForm extends React.Component {
   handleRegistration = e => {
     e.preventDefault();
     this.props.register(this.state);
+    document.getElementById("username").value = "";
+    document.getElementById("displayName").value = "";
+    document.getElementById("password").value = "";
   };
 
   handleChange = e => {
@@ -25,6 +28,7 @@ class RegistrationForm extends React.Component {
           <input
             type="text"
             name="username"
+            id="username"
             autoFocus
             required
             onChange={this.handleChange}
@@ -33,6 +37,7 @@ class RegistrationForm extends React.Component {
           <input
             type="text"
             name="displayName"
+            id="displayName"
             required
             onChange={this.handleChange}
           />
@@ -40,6 +45,7 @@ class RegistrationForm extends React.Component {
           <input
             type="password"
             name="password"
+            id="password"
             required
             onChange={this.handleChange}
           />
