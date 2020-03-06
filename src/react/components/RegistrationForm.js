@@ -1,16 +1,18 @@
 import React from "react";
 import Spinner from "react-spinkit";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
-import { login } from "../../redux";
-import "./LoginForm.css";
+import { register } from "../../redux";
+import "./RegistrationForm.css";
 
-class LoginForm extends React.Component {
-  state = { username: "", password: "" };
+class RegistrationForm extends React.Component {
+  state = { username: "", displayName: "", password: "" };
 
-  handleLogin = e => {
+  handleRegistration = e => {
     e.preventDefault();
-    this.props.login(this.state);
+    this.props.register(this.state);
+    document.getElementById("username").value = "";
+    document.getElementById("displayName").value = "";
+    document.getElementById("password").value = "";
   };
 
   handleChange = e => {
@@ -21,12 +23,21 @@ class LoginForm extends React.Component {
     const { loading, error } = this.props;
     return (
       <React.Fragment>
-        <form id="login-form" onSubmit={this.handleLogin}>
+        <form id="registration-form" onSubmit={this.handleRegistration}>
           <label htmlFor="username">Username</label>
           <input
             type="text"
             name="username"
+            id="username"
             autoFocus
+            required
+            onChange={this.handleChange}
+          />
+          <label htmlFor="displayName">Display Name</label>
+          <input
+            type="text"
+            name="displayName"
+            id="displayName"
             required
             onChange={this.handleChange}
           />
@@ -34,19 +45,16 @@ class LoginForm extends React.Component {
           <input
             type="password"
             name="password"
+            id="password"
             required
             onChange={this.handleChange}
           />
           <button type="submit" disabled={loading}>
-            Login
+            Register
           </button>
         </form>
         {loading && <Spinner name="circle" color="blue" />}
         {error && <p style={{ color: "red" }}>{error.message}</p>}
-        <p>* If you do not have an account, register below.</p>
-        <Link to="/register">
-          <button id="registerButton">Register New User</button>
-        </Link>
       </React.Fragment>
     );
   }
@@ -54,9 +62,9 @@ class LoginForm extends React.Component {
 
 export default connect(
   state => ({
-    result: state.auth.login.result,
-    loading: state.auth.login.loading,
-    error: state.auth.login.error
+    result: state.auth.register.result,
+    loading: state.auth.register.loading,
+    error: state.auth.register.error
   }),
-  { login }
-)(LoginForm);
+  { register }
+)(RegistrationForm);

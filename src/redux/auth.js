@@ -11,6 +11,23 @@ import {
 
 const url = domain + "/auth";
 
+const REGISTER = createActions("register");
+
+export const register = registerData => dispatch => {
+  dispatch(REGISTER.START());
+
+  return fetch(domain + "/users", {
+    method: "POST",
+    headers: jsonHeaders,
+    body: JSON.stringify(registerData)
+  })
+    .then(handleJsonResponse)
+    .then(result => {
+      dispatch(REGISTER.SUCCESS(result));
+    })
+    .catch(err => Promise.reject(dispatch(REGISTER.FAIL(err))));
+};
+
 const LOGIN = createActions("login");
 export const login = loginData => dispatch => {
   dispatch(LOGIN.START());
@@ -47,5 +64,8 @@ export const reducers = {
   }),
   logout: createReducer(asyncInitialState, {
     ...asyncCases(LOGOUT)
+  }),
+  register: createReducer(asyncInitialState, {
+    ...asyncCases(REGISTER)
   })
 };

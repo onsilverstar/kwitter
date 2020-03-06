@@ -22,6 +22,12 @@ class Menu extends React.Component {
             </Link>
           </div>
         )}
+        {!this.props.isAuthenticated && (
+          <div id="menu-links">
+            <Link to="/register">Register</Link>
+            <Link to="/">Login</Link>
+          </div>
+        )}
       </div>
     );
   }
