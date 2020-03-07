@@ -2,6 +2,7 @@ import React from "react";
 import Spinner from "react-spinkit";
 import { connect } from "react-redux";
 import { register } from "../../redux";
+import { Link } from "react-router-dom";
 import "./RegistrationForm.css";
 
 class RegistrationForm extends React.Component {
@@ -20,7 +21,7 @@ class RegistrationForm extends React.Component {
   };
 
   render() {
-    const { loading, error } = this.props;
+    const { loading, error, result } = this.props;
     return (
       <React.Fragment>
         <form id="registration-form" onSubmit={this.handleRegistration}>
@@ -55,6 +56,14 @@ class RegistrationForm extends React.Component {
         </form>
         {loading && <Spinner name="circle" color="blue" />}
         {error && <p style={{ color: "red" }}>{error.message}</p>}
+        {result && (
+          <React.Fragment>
+            <p>* You are Registered!, login below.</p>
+            <Link to="/">
+              <button id="loginButton">Login</button>
+            </Link>
+          </React.Fragment>
+        )}
       </React.Fragment>
     );
   }
@@ -62,9 +71,9 @@ class RegistrationForm extends React.Component {
 
 export default connect(
   state => ({
-    result: state.auth.register.result,
-    loading: state.auth.register.loading,
-    error: state.auth.register.error
+    result: state.users.register.result,
+    loading: state.users.register.loading,
+    error: state.users.register.error
   }),
   { register }
 )(RegistrationForm);
