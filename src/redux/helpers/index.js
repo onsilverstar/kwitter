@@ -12,7 +12,6 @@ export const jsonHeaders = {
 
 export const handleJsonResponse = res => {
   if (res.ok) {
-    console.log("json returned");
     return res.json();
   }
   return res.json().then(result => {
