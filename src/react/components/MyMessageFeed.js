@@ -16,12 +16,12 @@ class MyMessageFeed extends React.Component {
     const { result } = this.props;
 
     return (
-      <React.Fragment>
+      <div>
         <div className="messageFeedWrapper">
           {result &&
             result.messages.map(message => (
-              <>
-                <div className="messageFeedMessage" key={message.id}>
+              <div key={message.id}>
+                <div className="messageFeedMessage">
                   <h2>{message.username}</h2>
                   <p>{message.text}</p>
                   <div>
@@ -29,10 +29,10 @@ class MyMessageFeed extends React.Component {
                     <button>Delete</button>
                   </div>
                 </div>
-              </>
+              </div>
             ))}
         </div>
-      </React.Fragment>
+      </div>
     );
   }
 }
