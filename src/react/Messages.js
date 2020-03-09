@@ -3,6 +3,7 @@ import { Menu } from "./components";
 import { userIsAuthenticated } from "./HOCs";
 import "./components/NewMessageFeed.css";
 import NewMessageFeed from "./components/NewMessageFeed";
+import MyMessageFeed from "./components/MyMessageFeed";
 
 class Messages extends React.Component {
   render() {
@@ -16,6 +17,7 @@ class Messages extends React.Component {
           </div>
           <div className="messageColumn">
             <h3>My Messages</h3>
+            <MyMessageFeed />
           </div>
           <div className="messageColumn">
             <h3>Latest Messages</h3>

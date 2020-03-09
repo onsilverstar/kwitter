@@ -4,9 +4,18 @@ import { newmessagefeed } from "../../redux";
 import "./NewMessageFeed.css";
 
 class NewMessageFeed extends React.Component {
+  populateMessageFeed = () => {
+    this.props.newmessagefeed();
+  };
+
+  componentDidMount() {
+    this.populateMessageFeed();
+  }
+
   render() {
-    const { result } = this.props;
-    return result;
+    //const { result } = this.props;
+    //return result;
+    return <p>Got messages</p>;
   }
 }
 
