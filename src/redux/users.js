@@ -29,6 +29,8 @@ export const edituser = edituserData => dispatch => {
     .catch(err => Promise.reject(dispatch(EDITUSER.FAIL(err))));
 };
 
+const DELETEUSER = createActions("edituser");
+
 export const deleteuser = deleteuserData => dispatch => {
     dispatch(DELETEUSER.START());
   
