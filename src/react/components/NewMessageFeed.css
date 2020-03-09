@@ -1,9 +1,0 @@
-.messagesWrapper {
-  display: flex;
-}
-.messageColumn {
-  background-color: lightgrey;
-  margin: 10px;
-  padding: 10px;
-  flex-basis: 30%;
-}

@@ -28,9 +28,10 @@ export const newmessagefeed = newmessagefeedData => dispatch => {
 
 const MYMESSAGEFEED = createActions("mymessagefeed");
 
-export const mymessagefeed = mymessagefeedData => dispatch => {
+export const mymessagefeed = mymessagefeedData => (dispatch, getState) => {
   dispatch(MYMESSAGEFEED.START());
-  return fetch(url + "?limit=100&offset=0&username=aly24", {
+  const loggedInUsername = getState().auth.login.result.username; //"mb123"; //state.auth.login.result.username
+  return fetch(url + "?limit=100&offset=0&username=" + loggedInUsername, {
     method: "GET",
     headers: jsonHeaders,
     body: JSON.stringify(mymessagefeedData)

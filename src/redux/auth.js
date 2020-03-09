@@ -28,7 +28,6 @@ export const login = loginData => dispatch => {
 const LOGOUT = createActions("logout");
 export const logout = () => (dispatch, getState) => {
   dispatch(LOGOUT.START());
-
   const token = getState().auth.login.result.token;
 
   return fetch(url + "/logout", {

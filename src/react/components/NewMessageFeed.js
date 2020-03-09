@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { newmessagefeed } from "../../redux";
-import "./NewMessageFeed.css";
+import "./Messages.css";
 
 class NewMessageFeed extends React.Component {
   populateMessageFeed = () => {
@@ -13,9 +13,26 @@ class NewMessageFeed extends React.Component {
   }
 
   render() {
-    //const { result } = this.props;
+    const { result } = this.props;
     //return result;
-    return <p>Got messages</p>;
+    return (
+      <React.Fragment>
+        <div className="messageFeedWrapper">
+          {result &&
+            result.messages.map(message => (
+              <>
+                <div className="messageFeedMessage" key={message.id}>
+                  <h2>{message.username}</h2>
+                  <p>{message.text}</p>
+                  <div>
+                    <button>Like</button> | {message.likes.length} |
+                  </div>
+                </div>
+              </>
+            ))}
+        </div>
+      </React.Fragment>
+    );
   }
 }
 

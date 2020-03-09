@@ -1,7 +1,7 @@
 import React from "react";
 import { Menu } from "./components";
 import { userIsAuthenticated } from "./HOCs";
-import "./components/NewMessageFeed.css";
+import "./components/Messages.css";
 import NewMessageFeed from "./components/NewMessageFeed";
 import MyMessageFeed from "./components/MyMessageFeed";
 
