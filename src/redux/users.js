@@ -11,9 +11,26 @@ import {
 
   const url = domain + "/users";
 
+  const REGISTER = createActions("register");
+
+  export const register = registerData => dispatch => {
+    dispatch(REGISTER.START());
+  
+    return fetch(url, {
+      method: "POST",
+      headers: jsonHeaders,
+      body: JSON.stringify(registerData)
+    })
+      .then(handleJsonResponse)
+      .then(result => {
+        dispatch(REGISTER.SUCCESS(result));
+      })
+      .catch(err => Promise.reject(dispatch(REGISTER.FAIL(err))));
+  };
+
 const EDITUSER = createActions("edituser");
 
-export const edituser = edituserData => dispatch => {
+export const edituser = edituserData => (dispatch,getState) => {
   dispatch(EDITUSER.START());
 
   const token = getState().auth.login.result.token;
@@ -32,7 +49,7 @@ export const edituser = edituserData => dispatch => {
 
 const DELETEUSER = createActions("edituser");
 
-export const deleteuser = deleteuserData => dispatch => {
+export const deleteuser = deleteuserData => (dispatch,getState) => {
     dispatch(DELETEUSER.START());
   
     const token = getState().auth.login.result.token;
@@ -49,32 +66,15 @@ export const deleteuser = deleteuserData => dispatch => {
       .catch(err => Promise.reject(dispatch(DELETEUSER.FAIL(err))));
   };
 
-  const REGISTER = createActions("register");
-
-export const register = registerData => dispatch => {
-  dispatch(REGISTER.START());
-
-  return fetch(url, {
-    method: "POST",
-    headers: jsonHeaders,
-    body: JSON.stringify(registerData)
-  })
-    .then(handleJsonResponse)
-    .then(result => {
-      dispatch(REGISTER.SUCCESS(result));
-    })
-    .catch(err => Promise.reject(dispatch(REGISTER.FAIL(err))));
-};
-
 export const reducers = {
+  register: createReducer(asyncInitialState, {
+    ...asyncCases(REGISTER)
+  }),
     edituser: createReducer(getInitStateFromStorage("edituser", asyncInitialState), {
       ...asyncCases(EDITUSER),
       [EDITUSER.SUCCESS.toString()]: (state, action) => asyncInitialState
     }),
     deleteuser: createReducer(asyncInitialState, {
       ...asyncCases(DELETEUSER)
-    }),
-    register: createReducer(asyncInitialState, {
-      ...asyncCases(REGISTER)
     })
   };
