@@ -48,14 +48,34 @@ export const deleteuser = deleteuserData => dispatch => {
       .catch(err => Promise.reject(dispatch(DELETEUSER.FAIL(err))));
   };
 
+  const REGISTER = createActions("register");
+
+export const register = registerData => dispatch => {
+  dispatch(REGISTER.START());
+
+  return fetch(url, {
+    method: "POST",
+    headers: jsonHeaders,
+    body: JSON.stringify(registerData)
+  })
+    .then(handleJsonResponse)
+    .then(result => {
+      dispatch(REGISTER.SUCCESS(result));
+    })
+    .catch(err => Promise.reject(dispatch(REGISTER.FAIL(err))));
+};
+
+
 export const reducers = {
     edituser: createReducer(getInitStateFromStorage("edituser", asyncInitialState), {
       ...asyncCases(EDITUSER),
       [EDITUSER.SUCCESS.toString()]: (state, action) => asyncInitialState
-    })}
-
-    export const reducers = {
-        deleteuser: createReducer(getInitStateFromStorage("deleteuser", asyncInitialState), {
-          ...asyncCases(DELETEUSER),
-          [DELETEUSER.SUCCESS.toString()]: (state, action) => asyncInitialState
-        })}
+    }),
+    deleteuser: createReducer(asyncInitialState, {
+      ...asyncCases(DELETEUSER)
+    }),
+    register: createReducer(asyncInitialState, {
+      ...asyncCases(REGISTER)
+    })
+  };
+  
