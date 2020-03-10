@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { mymessagefeed } from "../../redux";
 import "./Messages.css";
+import DeleteMessage from "../components/DeleteMessage";
 
 class MyMessageFeed extends React.Component {
   populateMessageFeed = () => {
@@ -26,7 +27,7 @@ class MyMessageFeed extends React.Component {
                   <p>{message.text}</p>
                   <div>
                     <button>Like</button> | {message.likes.length} |{" "}
-                    <button>Delete</button>
+                    <DeleteMessage messageId={message.id} />
                   </div>
                 </div>
               </div>
