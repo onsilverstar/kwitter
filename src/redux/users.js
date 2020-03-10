@@ -9,6 +9,7 @@ import {
     createReducer
   } from "./helpers";
 
+  const url = domain + "/users";
 
 const EDITUSER = createActions("edituser");
 
@@ -17,7 +18,7 @@ export const edituser = edituserData => dispatch => {
 
   const token = getState().auth.login.result.token;
 
-  return fetch(domain + "/users", {
+  return fetch(url, {
     method: "PATCH",
     headers: { Authorization: "Bearer " + token, ...jsonHeaders },
     body: JSON.stringify(edituserData)
@@ -36,7 +37,7 @@ export const deleteuser = deleteuserData => dispatch => {
   
     const token = getState().auth.login.result.token;
   
-    return fetch(domain + "/users", {
+    return fetch(url, {
       method: "DELETE",
       headers: { Authorization: "Bearer " + token, ...jsonHeaders },
       body: JSON.stringify(deleteuserData)
@@ -65,7 +66,6 @@ export const register = registerData => dispatch => {
     .catch(err => Promise.reject(dispatch(REGISTER.FAIL(err))));
 };
 
-
 export const reducers = {
     edituser: createReducer(getInitStateFromStorage("edituser", asyncInitialState), {
       ...asyncCases(EDITUSER),
@@ -78,4 +78,3 @@ export const reducers = {
       ...asyncCases(REGISTER)
     })
   };
-  
