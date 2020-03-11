@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { mymessagefeed } from "../../redux";
 import "./Messages.css";
 import DeleteMessage from "../components/DeleteMessage";
+import ToggleLike from "./ToggleLike";
 
 class MyMessageFeed extends React.Component {
   populateMessageFeed = () => {
@@ -26,7 +27,8 @@ class MyMessageFeed extends React.Component {
                   <h2>{message.username}</h2>
                   <p>{message.text}</p>
                   <div>
-                    <button>Like</button> | {message.likes.length} |{" "}
+                    <ToggleLike messageId={message.id} /> |{" "}
+                    {message.likes.length} |{" "}
                     <DeleteMessage messageId={message.id} />
                   </div>
                 </div>
