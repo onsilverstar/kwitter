@@ -11,11 +11,11 @@ import {
 const url = domain + "/likes";
 
 const TOGGLELIKE = createActions("togglelike");
-export const togglelike = (messageId, likeData) => (dispatch, getState) => {
+export const togglelike = likeData => (dispatch, getState) => {
   dispatch(TOGGLELIKE.START());
   const token = getState().auth.login.result.token;
   console.log(token);
-  return fetch(url + "/" + messageId, {
+  return fetch(url, {
     method: "POST",
     headers: { Authorization: "Bearer " + token, ...jsonHeaders },
     body: JSON.stringify(likeData)

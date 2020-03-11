@@ -3,10 +3,12 @@ import { connect } from "react-redux";
 import { togglelike } from "../../redux";
 
 class ToggleLike extends React.Component {
+  state = { messageId: this.props.messageId };
+
   toggleLike = (e, messageId) => {
     e.preventDefault();
     console.log(messageId);
-    this.props.togglelike(messageId);
+    this.props.togglelike(this.state);
     console.log("after reducer called");
   };
 
