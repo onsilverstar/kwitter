@@ -42,12 +42,12 @@ export const edituser = edituserData => (dispatch,getState) => {
   })
     .then(handleJsonResponse)
     .then(result => {
-      dispatch(EDITUSER.SUCCESS(result));
+     return dispatch(EDITUSER.SUCCESS(result));
     })
     .catch(err => Promise.reject(dispatch(EDITUSER.FAIL(err))));
 };
 
-const DELETEUSER = createActions("edituser");
+const DELETEUSER = createActions("deleteuser");
 
 export const deleteuser = deleteuserData => (dispatch,getState) => {
     dispatch(DELETEUSER.START());
