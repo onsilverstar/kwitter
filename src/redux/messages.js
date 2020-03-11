@@ -47,14 +47,11 @@ const DELETEMESSAGE = createActions("deletemessage");
 export const deletemessage = messageId => (dispatch, getState) => {
   dispatch(DELETEMESSAGE.START());
   const token = getState().auth.login.result.token;
-  console.log("right before fetch");
-  return fetch(url + messageId, {
+  console.log(token);
+  return fetch(url + "/" + messageId, {
     method: "DELETE",
     headers: { Authorization: "Bearer " + token, ...jsonHeaders }
-  })
-    .then(handleJsonResponse)
-    .then(result => dispatch(DELETEMESSAGE.SUCCESS(result)))
-    .catch(err => Promise.reject(dispatch(DELETEMESSAGE.FAIL(err))));
+  });
 };
 
 export const reducers = {
