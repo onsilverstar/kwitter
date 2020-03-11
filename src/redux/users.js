@@ -34,8 +34,8 @@ export const edituser = edituserData => (dispatch,getState) => {
   dispatch(EDITUSER.START());
 
   const token = getState().auth.login.result.token;
-
-  return fetch(url, {
+const userName = getState().auth.login.result.username
+  return fetch(url + "/" + userName, {
     method: "PATCH",
     headers: { Authorization: "Bearer " + token, ...jsonHeaders },
     body: JSON.stringify(edituserData)
