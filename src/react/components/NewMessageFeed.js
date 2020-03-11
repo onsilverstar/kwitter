@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { newmessagefeed } from "../../redux";
 import "./Messages.css";
+import ToggleLike from "./ToggleLike";
 
 class NewMessageFeed extends React.Component {
   populateMessageFeed = () => {
@@ -25,7 +26,8 @@ class NewMessageFeed extends React.Component {
                   <h2>{message.username}</h2>
                   <p>{message.text}</p>
                   <div>
-                    <button>Like</button> | {message.likes.length} |
+                    <ToggleLike messageId={message.id} /> |{" "}
+                    {message.likes.length} |
                   </div>
                 </div>
               </div>
