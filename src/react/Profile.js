@@ -2,6 +2,7 @@ import React from "react";
 import { Menu } from "./components";
 import "./components/Profile.css";
 import { userIsAuthenticated } from "./HOCs";
+import { EditUser } from "./components"
 
 class Profile extends React.Component {
   render() {
@@ -17,6 +18,7 @@ class Profile extends React.Component {
           <div className="profileColumn">
             <h3>Update Profile</h3>
             <p>Update User Component</p>
+            <EditUser />
           </div>
         </div>
       </>
