@@ -57,13 +57,7 @@ export const deleteuser = deleteuserData => (dispatch,getState) => {
     return fetch(url, {
       method: "DELETE",
       headers: { Authorization: "Bearer " + token, ...jsonHeaders },
-      body: JSON.stringify(deleteuserData)
-    })
-      .then(handleJsonResponse)
-      .then(result => {
-        dispatch(DELETEUSER.SUCCESS(result));
-      })
-      .catch(err => Promise.reject(dispatch(DELETEUSER.FAIL(err))));
+    });
   };
 
 export const reducers = {
