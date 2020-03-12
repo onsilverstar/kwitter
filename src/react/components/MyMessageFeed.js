@@ -1,18 +1,19 @@
 import React from "react";
 import { connect } from "react-redux";
-import { mymessagefeed, store } from "../../redux";
+import { mymessagefeed } from "../../redux";
 import "./Messages.css";
 import DeleteMessage from "../components/DeleteMessage";
 import ToggleLike from "./ToggleLike";
 
 class MyMessageFeed extends React.Component {
+  state = { username: "" };
+
   populateMessageFeed = () => {
     this.props.mymessagefeed();
   };
 
   componentDidMount() {
     this.populateMessageFeed();
-    store.subscribe(() => this.forceUpdate());
   }
 
   render() {

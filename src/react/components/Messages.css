@@ -23,3 +23,15 @@
   padding-bottom: 20px;
   padding-top: 5px;
 }
+.postMessageColumn {
+  background-color: lightgrey;
+  margin: 10px;
+  padding: 10px;
+  flex-basis: 30%;
+  height: 210px;
+}
+textarea {
+  width: 98%;
+  position: relative;
+  top: 5px;
+}

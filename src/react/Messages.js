@@ -13,7 +13,7 @@ class Messages extends React.Component {
         <Menu isAuthenticated={this.props.isAuthenticated} />
         <h2>Messages</h2>
         <div className="messagesWrapper">
-          <div className="messageColumn">
+          <div className="postMessageColumn">
             <h3>Post Message</h3>
             <PostMessage />
           </div>

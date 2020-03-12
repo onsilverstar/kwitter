@@ -28,13 +28,14 @@ class PostMessage extends React.Component {
             name="postMessage"
             id="postMessage"
             placeholder="new message here"
-            rows="5"
-            columns="50"
+            rows="8"
+            columns="48"
             width="100%"
             autoFocus
             required
             onChange={this.handleChange}
           />
+          <br />
           <br />
           <button type="submit">Submit Post</button>
         </form>

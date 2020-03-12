@@ -2,7 +2,8 @@ import React from "react";
 import { Menu } from "./components";
 import "./components/Profile.css";
 import { userIsAuthenticated } from "./HOCs";
-import { EditUser } from "./components"
+import { EditUser } from "./components";
+import DisplayProfile from "./components/DisplayProfile";
 
 class Profile extends React.Component {
   render() {
@@ -12,8 +13,7 @@ class Profile extends React.Component {
         <h2>Profile</h2>
         <div className="profileWrapper">
           <div className="profileColumn">
-            <h3>User Profile</h3>
-            <p>User Profile Component</p>
+            <DisplayProfile />
           </div>
           <div className="profileColumn">
             <h3>Update Profile</h3>
