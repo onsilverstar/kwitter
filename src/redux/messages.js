@@ -43,11 +43,43 @@ export const mymessagefeed = mymessagefeedData => (dispatch, getState) => {
     .catch(err => Promise.reject(dispatch(MYMESSAGEFEED.FAIL(err))));
 };
 
+const DELETEMESSAGE = createActions("deletemessage");
+export const deletemessage = messageId => (dispatch, getState) => {
+  dispatch(DELETEMESSAGE.START());
+  const token = getState().auth.login.result.token;
+  console.log(token);
+  return fetch(url + "/" + messageId, {
+    method: "DELETE",
+    headers: { Authorization: "Bearer " + token, ...jsonHeaders }
+  });
+};
+
+const POSTMESSAGE = createActions("postmessage");
+export const postmessage = messageData => (dispatch, getState) => {
+  dispatch(POSTMESSAGE.START());
+  const token = getState().auth.login.result.token;
+  console.log(token);
+  return fetch(url, {
+    method: "POST",
+    headers: { Authorization: "Bearer " + token, ...jsonHeaders },
+    body: JSON.stringify(messageData)
+  })
+    .then(handleJsonResponse)
+    .then(result => dispatch(POSTMESSAGE.SUCCESS(result)))
+    .catch(err => Promise.reject(dispatch(POSTMESSAGE.FAIL(err))));
+};
+
 export const reducers = {
   newmessagefeed: createReducer(asyncInitialState, {
     ...asyncCases(NEWMESSAGEFEED)
   }),
   mymessagefeed: createReducer(asyncInitialState, {
     ...asyncCases(MYMESSAGEFEED)
+  }),
+  deletemessage: createReducer(asyncInitialState, {
+    ...asyncCases(DELETEMESSAGE)
+  }),
+  postmessage: createReducer(asyncInitialState, {
+    ...asyncCases(POSTMESSAGE)
   })
 };

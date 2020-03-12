@@ -2,8 +2,12 @@ import React from "react";
 import { connect } from "react-redux";
 import { mymessagefeed } from "../../redux";
 import "./Messages.css";
+import DeleteMessage from "../components/DeleteMessage";
+import ToggleLike from "./ToggleLike";
 
 class MyMessageFeed extends React.Component {
+  state = { username: "" };
+
   populateMessageFeed = () => {
     this.props.mymessagefeed();
   };
@@ -25,8 +29,12 @@ class MyMessageFeed extends React.Component {
                   <h2>{message.username}</h2>
                   <p>{message.text}</p>
                   <div>
-                    <button>Like</button> | {message.likes.length} |{" "}
-                    <button>Delete</button>
+                    <ToggleLike
+                      messageId={message.id}
+                      messageLikesArray={message.likes}
+                    />{" "}
+                    | {message.likes.length} |{" "}
+                    <DeleteMessage messageId={message.id} />
                   </div>
                 </div>
               </div>
