@@ -2,7 +2,7 @@ import React from "react";
 import Spinner from "react-spinkit";
 import { connect } from "react-redux";
 import { postmessage } from "../../redux";
-import "./RegistrationForm.css";
+import "./Messages.css";
 
 class PostMessage extends React.Component {
   state = { text: "" };
@@ -23,18 +23,19 @@ class PostMessage extends React.Component {
     return (
       <React.Fragment>
         <form id="postmessage-form" onSubmit={this.handlePostMessage}>
-          <input
-            type="textarea"
+          <textarea
+            type="text"
             name="postMessage"
             id="postMessage"
             placeholder="new message here"
-            rows="10"
+            rows="5"
             columns="50"
+            width="100%"
             autoFocus
             required
             onChange={this.handleChange}
           />
-
+          <br />
           <button type="submit">Submit Post</button>
         </form>
         {loading && <Spinner name="circle" color="blue" />}
