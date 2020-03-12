@@ -4,6 +4,9 @@ import { newmessagefeed } from "../../redux";
 import "./Messages.css";
 import ToggleLike from "./ToggleLike";
 
+//still need to add deleteLike component if message is alreeady liked by user
+// still need to force render when like button is clicked or message is deleted
+
 class NewMessageFeed extends React.Component {
   populateMessageFeed = () => {
     this.props.newmessagefeed();

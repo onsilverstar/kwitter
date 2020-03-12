@@ -4,6 +4,7 @@ import { userIsAuthenticated } from "./HOCs";
 import "./components/Messages.css";
 import NewMessageFeed from "./components/NewMessageFeed";
 import MyMessageFeed from "./components/MyMessageFeed";
+import PostMessage from "./components/PostMessage";
 
 class Messages extends React.Component {
   render() {
@@ -13,7 +14,8 @@ class Messages extends React.Component {
         <h2>Messages</h2>
         <div className="messagesWrapper">
           <div className="messageColumn">
-            <h3>New Message</h3>
+            <h3>Post Message</h3>
+            <PostMessage />
           </div>
           <div className="messageColumn">
             <h3>My Messages</h3>

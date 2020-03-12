@@ -54,6 +54,21 @@ export const deletemessage = messageId => (dispatch, getState) => {
   });
 };
 
+const POSTMESSAGE = createActions("postmessage");
+export const postmessage = messageData => (dispatch, getState) => {
+  dispatch(POSTMESSAGE.START());
+  const token = getState().auth.login.result.token;
+  console.log(token);
+  return fetch(url, {
+    method: "POST",
+    headers: { Authorization: "Bearer " + token, ...jsonHeaders },
+    body: JSON.stringify(messageData)
+  })
+    .then(handleJsonResponse)
+    .then(result => dispatch(POSTMESSAGE.SUCCESS(result)))
+    .catch(err => Promise.reject(dispatch(POSTMESSAGE.FAIL(err))));
+};
+
 export const reducers = {
   newmessagefeed: createReducer(asyncInitialState, {
     ...asyncCases(NEWMESSAGEFEED)
@@ -63,5 +78,8 @@ export const reducers = {
   }),
   deletemessage: createReducer(asyncInitialState, {
     ...asyncCases(DELETEMESSAGE)
+  }),
+  postmessage: createReducer(asyncInitialState, {
+    ...asyncCases(POSTMESSAGE)
   })
 };
