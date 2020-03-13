@@ -7,7 +7,6 @@ class ToggleLike extends React.Component {
 
   toggleLike = (e, messageId) => {
     e.preventDefault();
-    console.log(messageId);
     this.props.togglelike(this.state);
     console.log("after reducer called");
   };

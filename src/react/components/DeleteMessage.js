@@ -6,7 +6,6 @@ import "./Messages.css";
 class DeleteMessage extends React.Component {
   deleteMessage = (e, messageId) => {
     e.preventDefault();
-    console.log(messageId);
     this.props.deletemessage(messageId);
     console.log("after reducer called");
   };

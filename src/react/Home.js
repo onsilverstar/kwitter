@@ -7,8 +7,7 @@ class Home extends React.Component {
     return (
       <>
         <Menu />
-        <h2>Your favorite microblogging platform</h2>
-        <h3>Login to your account below.</h3>
+        <h2>The Online Message Support System for Quitters.</h2>
         <LoginForm />
       </>
     );

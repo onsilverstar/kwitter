@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { displayprofile } from "../../redux";
-import "./Messages.css";
+import "./Profile.css";
 
 class DisplayProfile extends React.Component {
   //state = { username: "" };
@@ -19,13 +19,29 @@ class DisplayProfile extends React.Component {
 
     return (
       <div>
-        {result && (
-          <div className="profileDisplayWrapper">
-            <h3>{result.user.displayName}</h3>
-            <div>{result.user.pictureLocation}</div>
-            <div>About: {result.user.about}</div>
-          </div>
-        )}
+        <div className="profileDisplayWrapper">
+          {result && (
+            <div>
+              <h3>{result.user.displayName}</h3>
+              {result.user.pictureLocation === null ? (
+                <div>
+                  <br />
+                  <button>ADD PROFILE IMAGE</button>
+                  <br />
+                </div>
+              ) : (
+                <img
+                  src={`https://kwitter-api.herokuapp.com/users/${this.props.result.user.username}/picture`}
+                  alt="User Profile"
+                  className="profileImage"
+                />
+              )}
+              <br />
+
+              <h4>About: {result.user.about}</h4>
+            </div>
+          )}
+        </div>
       </div>
     );
   }

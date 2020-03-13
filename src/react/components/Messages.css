@@ -1,3 +1,8 @@
+h2 {
+  position: relative;
+  left: 36px;
+  top: 5px;
+}
 .messagesWrapper {
   display: flex;
 }
@@ -5,14 +10,15 @@
   background-color: lightgrey;
   margin: 10px;
   padding: 10px;
-  flex-basis: 30%;
+  flex-basis: 33.3%;
+  border-radius: 1em;
 }
 .messageFeedWrapper {
   padding-left: 5px;
   padding-right: 5px;
   padding-bottom: 5px;
   padding-top: 5px;
-  height: 500px;
+  height: 450px;
   overflow: auto;
 }
 .messageFeedMessage {
@@ -27,8 +33,9 @@
   background-color: lightgrey;
   margin: 10px;
   padding: 10px;
-  flex-basis: 30%;
+  flex-basis: 33.3%;
   height: 210px;
+  border-radius: 1em;
 }
 textarea {
   width: 98%;

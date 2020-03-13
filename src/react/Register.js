@@ -7,7 +7,7 @@ class Register extends React.Component {
     return (
       <>
         <Menu isAuthenticated={this.props.isAuthenticated} />
-        <h2>Register</h2>
+        <h2>Register Below to Become a Member.</h2>
         <RegistrationForm />
       </>
     );
