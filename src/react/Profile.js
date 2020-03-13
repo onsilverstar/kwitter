@@ -10,15 +10,17 @@ class Profile extends React.Component {
     return (
       <>
         <Menu isAuthenticated={this.props.isAuthenticated} />
-        <h2>Profile</h2>
+        <h2>Member Profile</h2>
         <div className="profileWrapper">
           <div className="profileColumn">
             <DisplayProfile />
           </div>
           <div className="profileColumn">
             <h3>Update Profile</h3>
-            <p>Update User Component</p>
             <EditUser />
+            <br />
+
+            <h3>Update Profile Image</h3>
           </div>
         </div>
       </>

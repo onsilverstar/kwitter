@@ -13,11 +13,11 @@ class Menu extends React.Component {
   render() {
     return (
       <div id="menu">
-        <h1>Kwitter</h1>
+        <h1>Quitter</h1>
         {this.props.isAuthenticated && (
           <div id="menu-links">
-            <Link to="/messages">Message Feed</Link>
-            <Link to="/profiles/:username">Profile</Link>
+            <Link to="/messages">Message Center |</Link>
+            <Link to="/profiles/:username"> Profile |</Link>
             <Link to="/" onClick={this.handleLogout}>
               Logout
             </Link>
@@ -25,8 +25,8 @@ class Menu extends React.Component {
         )}
         {!this.props.isAuthenticated && (
           <div id="menu-links">
-            <Link to="/register">Register</Link>
-            <Link to="/">Login</Link>
+            <Link to="/register">Register |</Link>
+            <Link to="/"> Login</Link>
           </div>
         )}
       </div>

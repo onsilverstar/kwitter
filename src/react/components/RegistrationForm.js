@@ -23,7 +23,7 @@ class RegistrationForm extends React.Component {
   render() {
     const { loading, error, result } = this.props;
     return (
-      <React.Fragment>
+      <div className="registerFormColumn">
         <form id="registration-form" onSubmit={this.handleRegistration}>
           <label htmlFor="username">Username</label>
           <input
@@ -34,6 +34,7 @@ class RegistrationForm extends React.Component {
             required
             onChange={this.handleChange}
           />
+          <br />
           <label htmlFor="displayName">Display Name</label>
           <input
             type="text"
@@ -42,6 +43,7 @@ class RegistrationForm extends React.Component {
             required
             onChange={this.handleChange}
           />
+          <br />
           <label htmlFor="password">Password</label>
           <input
             type="password"
@@ -50,6 +52,7 @@ class RegistrationForm extends React.Component {
             required
             onChange={this.handleChange}
           />
+          <br />
           <button type="submit" disabled={loading}>
             Register
           </button>
@@ -65,7 +68,7 @@ class RegistrationForm extends React.Component {
             </Link>
           </React.Fragment>
         )}
-      </React.Fragment>
+      </div>
     );
   }
 }

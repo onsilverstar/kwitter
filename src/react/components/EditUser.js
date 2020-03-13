@@ -5,7 +5,7 @@ import { edituser } from "../../redux";
 import { Link } from "react-router-dom";
 
 class EditUser extends React.Component {
-  state = { password: "", about: "", displayName: ""};
+  state = { password: "", about: "", displayName: "" };
 
   handleEdit = e => {
     e.preventDefault();
@@ -24,7 +24,7 @@ class EditUser extends React.Component {
     return (
       <React.Fragment>
         <form id="edit" onSubmit={this.handleEdit}>
-          <label htmlFor="password">Password</label>
+          <label htmlFor="password">Password: </label>
           <input
             type="password"
             name="password"
@@ -33,7 +33,7 @@ class EditUser extends React.Component {
             required
             onChange={this.handlechange}
           />
-          <label htmlFor="about">About</label>
+          <label htmlFor="about">About: </label>
           <input
             type="text"
             name="about"
@@ -41,7 +41,7 @@ class EditUser extends React.Component {
             required
             onChange={this.handlechange}
           />
-          <label htmlFor="displayName">Display name</label>
+          <label htmlFor="displayName">Display name: </label>
           <input
             type="text"
             name="displayName"

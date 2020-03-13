@@ -15,14 +15,13 @@ const TOGGLELIKE = createActions("togglelike");
 export const togglelike = likeData => (dispatch, getState) => {
   dispatch(TOGGLELIKE.START());
   const token = getState().auth.login.result.token;
-  console.log(token);
   return fetch(url, {
     method: "POST",
     headers: { Authorization: "Bearer " + token, ...jsonHeaders },
     body: JSON.stringify(likeData)
   })
     .then(handleJsonResponse)
-    .then(result => dispatch(TOGGLELIKE.SUCCESS(result)))
+    .then(result => dispatch(TOGGLELIKE.SUCCESS(result))) //forceupdate to re render message feeds after like is submitted
     .catch(err => Promise.reject(dispatch(TOGGLELIKE.FAIL(err))));
 };
 
@@ -30,7 +29,6 @@ const DELETELIKE = createActions("deletelike");
 export const deletelike = likeId => (dispatch, getState) => {
   dispatch(DELETELIKE.START());
   const token = getState().auth.login.result.token;
-  console.log(token);
   return fetch(url + "/" + likeId, {
     method: "DELETE",
     headers: { Authorization: "Bearer " + token, ...jsonHeaders }
