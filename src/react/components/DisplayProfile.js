@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { displayprofile } from "../../redux";
 import "./Profile.css";
-
+import Button from "react-bootstrap/Button";
 class DisplayProfile extends React.Component {
   //state = { username: "" };
 
@@ -19,6 +19,7 @@ class DisplayProfile extends React.Component {
 
     return (
       <div>
+        <Button>Hi</Button>
         <div className="profileDisplayWrapper">
           {result && (
             <div>
