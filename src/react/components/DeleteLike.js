@@ -3,14 +3,16 @@ import { connect } from "react-redux";
 import { deletelike } from "../../redux";
 
 class DeleteLike extends React.Component {
-  deleteLike = (e, likeId) => {
+  deleteLike = (e, likesId) => {
     e.preventDefault();
-    this.props.deletelike(likeId);
+    console.log(likesId);
+    this.props.deletelike(likesId);
   };
 
   render() {
+    console.log(this.props.likesId);
     return (
-      <button onClick={e => this.deleteLike(e, this.props.likeId)}>
+      <button onClick={e => this.deleteLike(e, this.props.likesId)}>
         Unlike
       </button>
     );

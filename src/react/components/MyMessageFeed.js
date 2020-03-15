@@ -4,6 +4,7 @@ import { mymessagefeed } from "../../redux";
 import "./Messages.css";
 import DeleteMessage from "../components/DeleteMessage";
 import ToggleLike from "./ToggleLike";
+import DeleteLike from "./DeleteLike";
 
 class MyMessageFeed extends React.Component {
   state = { username: "" };
@@ -17,7 +18,7 @@ class MyMessageFeed extends React.Component {
   }
 
   render() {
-    const { result } = this.props;
+    const { result, username } = this.props;
 
     return (
       <div>
@@ -29,10 +30,14 @@ class MyMessageFeed extends React.Component {
                   <h2>{message.username}</h2>
                   <p>{message.text}</p>
                   <div>
-                    <ToggleLike
-                      messageId={message.id}
-                      messageLikesArray={message.likes}
-                    />{" "}
+                    {message.likes.includes(username) ? (
+                      <ToggleLike
+                        messageId={message.id}
+                        messageLikesArray={message.likes}
+                      />
+                    ) : (
+                      <DeleteLike likesId={message.likes.id} />
+                    )}{" "}
                     | {message.likes.length} |{" "}
                     <DeleteMessage messageId={message.id} />
                   </div>
