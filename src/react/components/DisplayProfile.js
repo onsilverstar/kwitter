@@ -19,7 +19,6 @@ class DisplayProfile extends React.Component {
 
     return (
       <div>
-        <Button>Hi</Button>
         <div className="profileDisplayWrapper">
           {result && (
             <div>
