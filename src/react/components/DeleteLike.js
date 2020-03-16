@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { deletelike } from "../../redux";
+import Button from "react-bootstrap/Button";
 
 class DeleteLike extends React.Component {
   deleteLike = (e, likeId) => {
@@ -10,9 +11,9 @@ class DeleteLike extends React.Component {
 
   render() {
     return (
-      <button onClick={e => this.deleteLike(e, this.props.likeId)}>
+      <Button onClick={e => this.deleteLike(e, this.props.likeId)}>
         Unlike
-      </button>
+      </Button>
     );
   }
 }
