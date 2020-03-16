@@ -26,7 +26,7 @@ class DisplayProfile extends React.Component {
               {result.user.pictureLocation === null ? (
                 <div>
                   <br />
-                  <button>ADD PROFILE IMAGE</button>
+                  <Button>ADD PROFILE IMAGE</Button>
                   <br />
                 </div>
               ) : (

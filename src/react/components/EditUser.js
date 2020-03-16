@@ -3,6 +3,7 @@ import Spinner from "react-spinkit";
 import { connect } from "react-redux";
 import { edituser } from "../../redux";
 import { Link } from "react-router-dom";
+import Button from "react-bootstrap/Button";
 
 class EditUser extends React.Component {
   state = { password: "", about: "", displayName: "" };
@@ -49,9 +50,9 @@ class EditUser extends React.Component {
             required
             onChange={this.handlechange}
           />
-          <button type="submit" disabled={loading}>
+          <Button type="submit" disabled={loading}>
             Submit
-          </button>
+          </Button>
         </form>
         {loading && <Spinner name="circle" color="blue" />}
         {error && <p style={{ color: "red" }}>{error.message}</p>}
@@ -60,7 +61,7 @@ class EditUser extends React.Component {
             <p>Changes made.</p>
             <br />
             <Link to="/">
-              <button id="editButton">Edit user</button>
+              <Button id="editButton">Edit user</Button>
             </Link>
           </React.Fragment>
         )}
