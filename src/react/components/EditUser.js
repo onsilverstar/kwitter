@@ -3,12 +3,8 @@ import Spinner from "react-spinkit";
 import { connect } from "react-redux";
 import { edituser } from "../../redux";
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
 import { Form } from "react-bootstrap/";
 import { Button } from "react-bootstrap";
-=======
-import Button from "react-bootstrap/Button";
->>>>>>> origin
 
 class EditUser extends React.Component {
   state = { password: "", about: "", displayName: "" };
@@ -29,7 +25,6 @@ class EditUser extends React.Component {
     const { loading, error, result } = this.props;
     return (
       <React.Fragment>
-<<<<<<< HEAD
         <Form>
           <Form.Group>
             <Form.Label>About</Form.Label>
@@ -62,7 +57,6 @@ class EditUser extends React.Component {
             Submit
           </Button>
         </Form>
-=======
         <form id="edit" onSubmit={this.handleEdit}>
           <label htmlFor="password">Password: </label>
           <input
@@ -93,7 +87,7 @@ class EditUser extends React.Component {
             Submit
           </Button>
         </form>
->>>>>>> origin
+        >>>>>>> origin
         {loading && <Spinner name="circle" color="blue" />}
         {error && <p style={{ color: "red" }}>{error.message}</p>}
         {result && (
