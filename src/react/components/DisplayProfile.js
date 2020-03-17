@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { displayprofile } from "../../redux";
 import "./Profile.css";
-import Button from "react-bootstrap/Button";
+import { Card } from "semantic-ui-react";
 class DisplayProfile extends React.Component {
   //state = { username: "" };
 
@@ -18,8 +18,8 @@ class DisplayProfile extends React.Component {
     const { result } = this.props;
 
     return (
-      <div>
-        <div className="profileDisplayWrapper">
+      <Card>
+        <div>
           {result && (
             <div>
               <h3>{result.user.displayName}</h3>
@@ -33,7 +33,6 @@ class DisplayProfile extends React.Component {
                 <img
                   src={`https://kwitter-api.herokuapp.com/users/${this.props.result.user.username}/picture`}
                   alt="User Profile"
-                  className="profileImage"
                 />
               )}
               <br />
@@ -42,7 +41,7 @@ class DisplayProfile extends React.Component {
             </div>
           )}
         </div>
-      </div>
+      </Card>
     );
   }
 }

@@ -3,6 +3,8 @@ import Spinner from "react-spinkit";
 import { connect } from "react-redux";
 import { edituser } from "../../redux";
 import { Link } from "react-router-dom";
+import { Form } from "react-bootstrap/";
+import { Button } from "react-bootstrap";
 
 class EditUser extends React.Component {
   state = { password: "", about: "", displayName: "" };
@@ -23,36 +25,38 @@ class EditUser extends React.Component {
     const { loading, error, result } = this.props;
     return (
       <React.Fragment>
-        <form id="edit" onSubmit={this.handleEdit}>
-          <label htmlFor="password">Password: </label>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            autoFocus
-            required
-            onChange={this.handlechange}
-          />
-          <label htmlFor="about">About: </label>
-          <input
-            type="text"
-            name="about"
-            id="about"
-            required
-            onChange={this.handlechange}
-          />
-          <label htmlFor="displayName">Display name: </label>
-          <input
-            type="text"
-            name="displayName"
-            id="displayName"
-            required
-            onChange={this.handlechange}
-          />
-          <button type="submit" disabled={loading}>
+        <Form>
+          <Form.Group>
+            <Form.Label>About</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="About me"
+              onChange={this.handlechange}
+            />
+            <Form.Text className="text-muted"></Form.Text>
+          </Form.Group>
+          <Form.Group>
+            <Form.Label>Display Name</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Display Name"
+              onChange={this.handlechange}
+            />
+            <Form.Text className="text-muted"></Form.Text>
+          </Form.Group>
+
+          <Form.Group controlId="formBasicPassword">
+            <Form.Label>Password</Form.Label>
+            <Form.Control
+              type="password"
+              placeholder="Password"
+              onChange={this.handlechange}
+            />
+          </Form.Group>
+          <Button variant="primary" type="submit" disabled={loading}>
             Submit
-          </button>
-        </form>
+          </Button>
+        </Form>
         {loading && <Spinner name="circle" color="blue" />}
         {error && <p style={{ color: "red" }}>{error.message}</p>}
         {result && (
