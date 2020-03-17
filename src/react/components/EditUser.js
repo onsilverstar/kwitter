@@ -3,8 +3,12 @@ import Spinner from "react-spinkit";
 import { connect } from "react-redux";
 import { edituser } from "../../redux";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 import { Form } from "react-bootstrap/";
 import { Button } from "react-bootstrap";
+=======
+import Button from "react-bootstrap/Button";
+>>>>>>> origin
 
 class EditUser extends React.Component {
   state = { password: "", about: "", displayName: "" };
@@ -25,6 +29,7 @@ class EditUser extends React.Component {
     const { loading, error, result } = this.props;
     return (
       <React.Fragment>
+<<<<<<< HEAD
         <Form>
           <Form.Group>
             <Form.Label>About</Form.Label>
@@ -57,6 +62,38 @@ class EditUser extends React.Component {
             Submit
           </Button>
         </Form>
+=======
+        <form id="edit" onSubmit={this.handleEdit}>
+          <label htmlFor="password">Password: </label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            autoFocus
+            required
+            onChange={this.handlechange}
+          />
+          <label htmlFor="about">About: </label>
+          <input
+            type="text"
+            name="about"
+            id="about"
+            required
+            onChange={this.handlechange}
+          />
+          <label htmlFor="displayName">Display name: </label>
+          <input
+            type="text"
+            name="displayName"
+            id="displayName"
+            required
+            onChange={this.handlechange}
+          />
+          <Button type="submit" disabled={loading}>
+            Submit
+          </Button>
+        </form>
+>>>>>>> origin
         {loading && <Spinner name="circle" color="blue" />}
         {error && <p style={{ color: "red" }}>{error.message}</p>}
         {result && (
@@ -64,7 +101,7 @@ class EditUser extends React.Component {
             <p>Changes made.</p>
             <br />
             <Link to="/">
-              <button id="editButton">Edit user</button>
+              <Button id="editButton">Edit user</Button>
             </Link>
           </React.Fragment>
         )}
