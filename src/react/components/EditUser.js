@@ -57,37 +57,6 @@ class EditUser extends React.Component {
             Submit
           </Button>
         </Form>
-        <form id="edit" onSubmit={this.handleEdit}>
-          <label htmlFor="password">Password: </label>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            autoFocus
-            required
-            onChange={this.handlechange}
-          />
-          <label htmlFor="about">About: </label>
-          <input
-            type="text"
-            name="about"
-            id="about"
-            required
-            onChange={this.handlechange}
-          />
-          <label htmlFor="displayName">Display name: </label>
-          <input
-            type="text"
-            name="displayName"
-            id="displayName"
-            required
-            onChange={this.handlechange}
-          />
-          <Button type="submit" disabled={loading}>
-            Submit
-          </Button>
-        </form>
-        >>>>>>> origin
         {loading && <Spinner name="circle" color="blue" />}
         {error && <p style={{ color: "red" }}>{error.message}</p>}
         {result && (
