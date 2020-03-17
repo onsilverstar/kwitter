@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { displayprofile } from "../../redux";
 import "./Profile.css";
-import { Card } from "semantic-ui-react";
+import { Card, Button } from "semantic-ui-react";
 class DisplayProfile extends React.Component {
   //state = { username: "" };
 
