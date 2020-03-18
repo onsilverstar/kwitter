@@ -25,30 +25,33 @@ class EditUser extends React.Component {
     const { loading, error, result } = this.props;
     return (
       <React.Fragment>
-        <Form>
-          <Form.Group>
+        <Form onSubmit={this.handleEdit}>
+          <Form.Group controlId="about">
             <Form.Label>About</Form.Label>
             <Form.Control
               type="text"
               placeholder="About me"
+              name="about"
               onChange={this.handlechange}
             />
             <Form.Text className="text-muted"></Form.Text>
           </Form.Group>
-          <Form.Group>
+          <Form.Group controlId="displayName">
             <Form.Label>Display Name</Form.Label>
             <Form.Control
               type="text"
+              name="displayName"
               placeholder="Display Name"
               onChange={this.handlechange}
             />
             <Form.Text className="text-muted"></Form.Text>
           </Form.Group>
 
-          <Form.Group controlId="formBasicPassword">
+          <Form.Group controlId="password">
             <Form.Label>Password</Form.Label>
             <Form.Control
               type="password"
+              name="password"
               placeholder="Password"
               onChange={this.handlechange}
             />
