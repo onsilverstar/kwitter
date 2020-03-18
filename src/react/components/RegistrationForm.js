@@ -3,6 +3,7 @@ import Spinner from "react-spinkit";
 import { connect } from "react-redux";
 import { register } from "../../redux";
 import { Link } from "react-router-dom";
+import Button from "react-bootstrap/Button";
 import "./RegistrationForm.css";
 
 class RegistrationForm extends React.Component {
@@ -53,9 +54,9 @@ class RegistrationForm extends React.Component {
             onChange={this.handleChange}
           />
           <br />
-          <button type="submit" disabled={loading}>
+          <Button type="submit" disabled={loading}>
             Register
-          </button>
+          </Button>
         </form>
         {loading && <Spinner name="circle" color="blue" />}
         {error && <p style={{ color: "red" }}>{error.message}</p>}
@@ -64,7 +65,7 @@ class RegistrationForm extends React.Component {
             <p>Registration Complete! Click Login!</p>
             <br />
             <Link to="/">
-              <button id="loginButton">Login</button>
+              <Button id="loginButton">Login</Button>
             </Link>
           </React.Fragment>
         )}

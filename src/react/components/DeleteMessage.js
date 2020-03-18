@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { deletemessage } from "../../redux";
+import Button from "react-bootstrap/Button";
 import "./Messages.css";
 
 class DeleteMessage extends React.Component {
@@ -14,9 +15,9 @@ class DeleteMessage extends React.Component {
     //const { result } = this.props;
 
     return (
-      <button onClick={e => this.deleteMessage(e, this.props.messageId)}>
+      <Button onClick={e => this.deleteMessage(e, this.props.messageId)}>
         Delete
-      </button>
+      </Button>
     );
   }
 }

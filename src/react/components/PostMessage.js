@@ -2,6 +2,7 @@ import React from "react";
 import Spinner from "react-spinkit";
 import { connect } from "react-redux";
 import { postmessage } from "../../redux";
+import Button from "react-bootstrap/Button";
 import "./Messages.css";
 
 class PostMessage extends React.Component {
@@ -36,7 +37,7 @@ class PostMessage extends React.Component {
           />
           <br />
           <br />
-          <button type="submit">Submit Post</button>
+          <Button type="submit">Submit Post</Button>
         </form>
         {loading && <Spinner name="circle" color="blue" />}
         {error && <p style={{ color: "red" }}>{error.message}</p>}
