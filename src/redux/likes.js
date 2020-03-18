@@ -9,8 +9,7 @@ import {
 } from "./helpers";
 
 const url = domain + "/likes";
-// for the unlike toggle, we need and if statement based on condition
-// that will then create fetch to /like/likeId  method of DELETE
+
 const TOGGLELIKE = createActions("togglelike");
 export const togglelike = likeData => (dispatch, getState) => {
   dispatch(TOGGLELIKE.START());
@@ -26,17 +25,23 @@ export const togglelike = likeData => (dispatch, getState) => {
 };
 
 const DELETELIKE = createActions("deletelike");
-export const deletelike = likeId => (dispatch, getState) => {
+export const deletelike = likesId => (dispatch, getState) => {
   dispatch(DELETELIKE.START());
   const token = getState().auth.login.result.token;
-  return fetch(url + "/" + likeId, {
+  return fetch(url + "/" + likesId, {
     method: "DELETE",
     headers: { Authorization: "Bearer " + token, ...jsonHeaders }
-  });
+  })
+    .then(handleJsonResponse)
+    .then(result => dispatch(DELETELIKE.SUCCESS(result))) //forceupdate to re render message feeds after like is submitted
+    .catch(err => Promise.reject(dispatch(DELETELIKE.FAIL(err))));
 };
 
 export const reducers = {
   togglelike: createReducer(asyncInitialState, {
     ...asyncCases(TOGGLELIKE)
+  }),
+  deletelike: createReducer(asyncInitialState, {
+    ...asyncCases(DELETELIKE)
   })
 };

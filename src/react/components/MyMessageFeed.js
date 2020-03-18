@@ -4,6 +4,7 @@ import { mymessagefeed } from "../../redux";
 import "./Messages.css";
 import DeleteMessage from "../components/DeleteMessage";
 import ToggleLike from "./ToggleLike";
+import DeleteLike from "./DeleteLike";
 
 class MyMessageFeed extends React.Component {
   state = { username: "" };
@@ -15,6 +16,17 @@ class MyMessageFeed extends React.Component {
   componentDidMount() {
     this.populateMessageFeed();
   }
+
+  likeOrUnlike = (messageId, likesArray) => {
+    let filteredMessageLikes = likesArray.filter(
+      like => like.username === this.props.username
+    );
+    if (filteredMessageLikes.length > 0) {
+      return <DeleteLike likesId={filteredMessageLikes[0].id} />;
+    } else {
+      return <ToggleLike messageId={messageId} />;
+    }
+  };
 
   render() {
     const { result } = this.props;
@@ -29,11 +41,8 @@ class MyMessageFeed extends React.Component {
                   <h2>{message.username}</h2>
                   <p>{message.text}</p>
                   <div>
-                    <ToggleLike
-                      messageId={message.id}
-                      messageLikesArray={message.likes}
-                    />{" "}
-                    | {message.likes.length} |{" "}
+                    {this.likeOrUnlike(message.id, message.likes)} |{" "}
+                    {message.likes.length} |{" "}
                     <DeleteMessage messageId={message.id} />
                   </div>
                 </div>

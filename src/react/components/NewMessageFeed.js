@@ -3,9 +3,7 @@ import { connect } from "react-redux";
 import { newmessagefeed } from "../../redux";
 import "./Messages.css";
 import ToggleLike from "./ToggleLike";
-
-//still need to add deleteLike component if message is alreeady liked by user
-// still need to force render when like button is clicked or message is deleted
+import DeleteLike from "./DeleteLike";
 
 class NewMessageFeed extends React.Component {
   populateMessageFeed = () => {
@@ -15,6 +13,17 @@ class NewMessageFeed extends React.Component {
   componentDidMount() {
     this.populateMessageFeed();
   }
+
+  likeOrUnlike = (messageId, likesArray) => {
+    let filteredMessageLikes = likesArray.filter(
+      like => like.username === this.props.username
+    );
+    if (filteredMessageLikes.length > 0) {
+      return <DeleteLike likesId={filteredMessageLikes[0].id} />;
+    } else {
+      return <ToggleLike messageId={messageId} />;
+    }
+  };
 
   render() {
     const { result } = this.props;
@@ -29,8 +38,8 @@ class NewMessageFeed extends React.Component {
                   <h2>{message.username}</h2>
                   <p>{message.text}</p>
                   <div>
-                    <ToggleLike messageId={message.id} /> |{" "}
-                    {message.likes.length} |
+                    {this.likeOrUnlike(message.id, message.likes)} |{" "}
+                    {message.likes.length}
                   </div>
                 </div>
               </div>
@@ -45,7 +54,8 @@ export default connect(
   state => ({
     result: state.messages.newmessagefeed.result,
     loading: state.messages.newmessagefeed.loading,
-    error: state.messages.newmessagefeed.error
+    error: state.messages.newmessagefeed.error,
+    username: state.auth.login.result.username
   }),
   { newmessagefeed }
 )(NewMessageFeed);

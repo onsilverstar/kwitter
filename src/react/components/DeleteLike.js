@@ -4,9 +4,9 @@ import { deletelike } from "../../redux";
 import Button from "react-bootstrap/Button";
 
 class DeleteLike extends React.Component {
-  deleteLike = (e, likeId) => {
+  deleteLike = (e, likesId) => {
     e.preventDefault();
-    this.props.deletelike(likeId);
+    this.props.deletelike(likesId);
   };
 
   render() {
