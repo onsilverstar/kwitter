@@ -5,8 +5,9 @@ import Button from "react-bootstrap/Button";
 
 class DeleteLike extends React.Component {
   deleteLike = (e, likesId) => {
+    console.log(this.props.likesId);
     e.preventDefault();
-    this.props.deletelike(likesId);
+    this.props.deletelike(this.props.likesId);
   };
 
   render() {

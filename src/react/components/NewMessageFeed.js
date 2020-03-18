@@ -27,7 +27,7 @@ class NewMessageFeed extends React.Component {
 
   render() {
     const { result } = this.props;
-    //return result;
+
     return (
       <div>
         <div className="messageFeedWrapper">
