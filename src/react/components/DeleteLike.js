@@ -4,8 +4,7 @@ import { deletelike } from "../../redux";
 import Button from "react-bootstrap/Button";
 
 class DeleteLike extends React.Component {
-  deleteLike = (e, likesId) => {
-    console.log(this.props.likesId);
+  deleteLike = e => {
     e.preventDefault();
     this.props.deletelike(this.props.likesId);
   };
@@ -23,7 +22,8 @@ export default connect(
   state => ({
     result: state.likes.deletelike.result,
     loading: state.likes.deletelike.loading,
-    error: state.likes.deletelike.error
+    error: state.likes.deletelike.error,
+    username: state.auth.login.result.username
   }),
   { deletelike }
 )(DeleteLike);
