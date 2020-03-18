@@ -17,8 +17,19 @@ class MyMessageFeed extends React.Component {
     this.populateMessageFeed();
   }
 
+  likeOrUnlike = (messageId, likesArray) => {
+    let filteredMessageLikes = likesArray.filter(
+      like => like.username === this.props.username
+    );
+    if (filteredMessageLikes.length > 0) {
+      return <DeleteLike likesId={filteredMessageLikes[0].id} />;
+    } else {
+      return <ToggleLike messageId={messageId} />;
+    }
+  };
+
   render() {
-    const { result, username } = this.props;
+    const { result } = this.props;
 
     return (
       <div>
@@ -30,15 +41,8 @@ class MyMessageFeed extends React.Component {
                   <h2>{message.username}</h2>
                   <p>{message.text}</p>
                   <div>
-                    {message.likes.includes(username) ? (
-                      <ToggleLike
-                        messageId={message.id}
-                        messageLikesArray={message.likes}
-                      />
-                    ) : (
-                      <DeleteLike likesId={message.likes.id} />
-                    )}{" "}
-                    | {message.likes.length} |{" "}
+                    {this.likeOrUnlike(message.id, message.likes)} |{" "}
+                    {message.likes.length} |{" "}
                     <DeleteMessage messageId={message.id} />
                   </div>
                 </div>

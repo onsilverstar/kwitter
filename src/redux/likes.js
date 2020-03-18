@@ -31,7 +31,6 @@ export const deletelike = likesId => (dispatch, getState) => {
   return fetch(url + "/" + likesId, {
     method: "DELETE",
     headers: { Authorization: "Bearer " + token, ...jsonHeaders }
-    //body: JSON.stringify(likeId)
   })
     .then(handleJsonResponse)
     .then(result => dispatch(DELETELIKE.SUCCESS(result))) //forceupdate to re render message feeds after like is submitted
