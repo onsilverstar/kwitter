@@ -6,8 +6,16 @@ import ToggleLike from "./ToggleLike";
 import DeleteLike from "./DeleteLike";
 
 class NewMessageFeed extends React.Component {
+  state = { reload: false };
+
   populateMessageFeed = () => {
     this.props.newmessagefeed();
+  };
+
+  shouldReload = () => {
+    setTimeout(() => {
+      this.props.newmessagefeed();
+    }, 200);
   };
 
   componentDidMount() {
@@ -19,9 +27,19 @@ class NewMessageFeed extends React.Component {
       like => like.username === this.props.username
     );
     if (filteredMessageLikes.length > 0) {
-      return <DeleteLike likesId={filteredMessageLikes[0].id} />;
+      return (
+        <DeleteLike
+          likesId={filteredMessageLikes[0].id}
+          reloadParent={this.shouldReload.bind(this)}
+        />
+      );
     } else {
-      return <ToggleLike messageId={messageId} />;
+      return (
+        <ToggleLike
+          messageId={messageId}
+          reloadParent={this.shouldReload.bind(this)}
+        />
+      );
     }
   };
 

@@ -20,7 +20,9 @@ export const togglelike = likeData => (dispatch, getState) => {
     body: JSON.stringify(likeData)
   })
     .then(handleJsonResponse)
-    .then(result => dispatch(TOGGLELIKE.SUCCESS(result))) //forceupdate to re render message feeds after like is submitted
+    .then(result => {
+      dispatch(TOGGLELIKE.SUCCESS(result));
+    }) //forceupdate to re render message feeds after like is submitted
     .catch(err => Promise.reject(dispatch(TOGGLELIKE.FAIL(err))));
 };
 

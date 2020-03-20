@@ -7,6 +7,12 @@ import MyMessageFeed from "./components/MyMessageFeed";
 import PostMessage from "./components/PostMessage";
 
 class Messages extends React.Component {
+  state = { reload: false };
+
+  shouldReload = () => {
+    this.setState({ reload: true });
+  };
+
   render() {
     return (
       <>
@@ -15,7 +21,7 @@ class Messages extends React.Component {
         <div className="messagesWrapper">
           <div className="postMessageColumn">
             <h3>Post Message</h3>
-            <PostMessage />
+            <PostMessage reloadParent={this.shouldReload} />
           </div>
           <div className="messageColumn">
             <h3>My Messages</h3>

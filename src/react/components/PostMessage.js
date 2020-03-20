@@ -12,6 +12,7 @@ class PostMessage extends React.Component {
     e.preventDefault();
     this.props.postmessage(this.state);
     document.getElementById("postMessage").value = "";
+    this.props.reloadParent();
   };
 
   handleChange = e => {

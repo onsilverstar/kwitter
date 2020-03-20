@@ -7,6 +7,7 @@ class DeleteLike extends React.Component {
   deleteLike = e => {
     e.preventDefault();
     this.props.deletelike(this.props.likesId);
+    this.props.reloadParent();
   };
 
   render() {
