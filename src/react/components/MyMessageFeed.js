@@ -61,7 +61,7 @@ class MyMessageFeed extends React.Component {
                     {message.likes.length} |{" "}
                     <DeleteMessage
                       messageId={message.id}
-                      reloadParent={this.shouldReload}
+                      reloadParent={this.shouldReload.bind(this)}
                     />
                   </div>
                 </div>

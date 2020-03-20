@@ -8,7 +8,7 @@ class DeleteMessage extends React.Component {
   deleteMessage = (e, messageId) => {
     e.preventDefault();
     this.props.deletemessage(messageId);
-    console.log("after reducer called");
+    this.props.reloadParent();
   };
 
   render() {
