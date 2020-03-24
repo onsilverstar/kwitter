@@ -1,7 +1,6 @@
 import {
   domain,
   jsonHeaders,
-  multiPartFormDataHeaders,
   handleJsonResponse,
   getInitStateFromStorage,
   asyncInitialState,
@@ -81,19 +80,17 @@ export const displayprofile = displayprofileData => (dispatch, getState) => {
 const UPDATEIMAGE = createActions("updateimage");
 
 export const updateimage = formData => (dispatch, getState) => {
-  console.log(formData);
   dispatch(UPDATEIMAGE.START());
   const token = getState().auth.login.result.token;
   const loggedInUsername = getState().auth.login.result.username;
   return fetch(url + "/" + loggedInUsername + "/picture", {
     method: "PUT",
-    headers: { Authorization: "Bearer " + token, ...multiPartFormDataHeaders },
+    headers: { Authorization: "Bearer " + token },
     body: formData
   })
     .then(handleJsonResponse)
     .then(result => {
       dispatch(UPDATEIMAGE.SUCCESS(result));
-      dispatch(DISPLAYPROFILE.START());
     })
     .catch(err => Promise.reject(dispatch(UPDATEIMAGE.FAIL(err))));
 };
