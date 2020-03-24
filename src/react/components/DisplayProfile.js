@@ -2,10 +2,10 @@ import React from "react";
 import { connect } from "react-redux";
 import { displayprofile } from "../../redux";
 import "./Profile.css";
-import { Card, Button } from "semantic-ui-react";
-class DisplayProfile extends React.Component {
-  //state = { username: "" };
+import { Card } from "semantic-ui-react";
+import defaultImage from "../../../src/images/defaultProfile.png";
 
+class DisplayProfile extends React.Component {
   populateDisplayProfile = () => {
     this.props.displayprofile();
   };
@@ -26,7 +26,11 @@ class DisplayProfile extends React.Component {
               {result.user.pictureLocation === null ? (
                 <div>
                   <br />
-                  <Button>ADD PROFILE IMAGE</Button>
+                  <img
+                    src={defaultImage}
+                    alt="Default"
+                    className="defaultImage"
+                  />
                   <br />
                 </div>
               ) : (
