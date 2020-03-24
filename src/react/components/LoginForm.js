@@ -3,6 +3,7 @@ import Spinner from "react-spinkit";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { login } from "../../redux";
+import Button from "react-bootstrap/Button";
 import "./LoginForm.css";
 
 class LoginForm extends React.Component {
@@ -20,7 +21,8 @@ class LoginForm extends React.Component {
   render() {
     const { loading, error } = this.props;
     return (
-      <React.Fragment>
+      <div className="loginFormColumn">
+        <h3>Please Login Below</h3>
         <form id="login-form" onSubmit={this.handleLogin}>
           <label htmlFor="username">Username</label>
           <input
@@ -30,6 +32,7 @@ class LoginForm extends React.Component {
             required
             onChange={this.handleChange}
           />
+          <br />
           <label htmlFor="password">Password</label>
           <input
             type="password"
@@ -37,17 +40,18 @@ class LoginForm extends React.Component {
             required
             onChange={this.handleChange}
           />
-          <button type="submit" disabled={loading}>
+          <br />
+          <Button type="submit" disabled={loading}>
             Login
-          </button>
+          </Button>
         </form>
         {loading && <Spinner name="circle" color="blue" />}
         {error && <p style={{ color: "red" }}>{error.message}</p>}
         <p>* If you do not have an account, register below.</p>
         <Link to="/register">
-          <button id="registerButton">Register New User</button>
+          <Button id="registerButton">Register New User</Button>
         </Link>
-      </React.Fragment>
+      </div>
     );
   }
 }

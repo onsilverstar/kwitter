@@ -2,6 +2,8 @@ import React from "react";
 import Spinner from "react-spinkit";
 import { connect } from "react-redux";
 import { register } from "../../redux";
+import { Link } from "react-router-dom";
+import Button from "react-bootstrap/Button";
 import "./RegistrationForm.css";
 
 class RegistrationForm extends React.Component {
@@ -20,9 +22,9 @@ class RegistrationForm extends React.Component {
   };
 
   render() {
-    const { loading, error } = this.props;
+    const { loading, error, result } = this.props;
     return (
-      <React.Fragment>
+      <div className="registerFormColumn">
         <form id="registration-form" onSubmit={this.handleRegistration}>
           <label htmlFor="username">Username</label>
           <input
@@ -33,6 +35,7 @@ class RegistrationForm extends React.Component {
             required
             onChange={this.handleChange}
           />
+          <br />
           <label htmlFor="displayName">Display Name</label>
           <input
             type="text"
@@ -41,6 +44,7 @@ class RegistrationForm extends React.Component {
             required
             onChange={this.handleChange}
           />
+          <br />
           <label htmlFor="password">Password</label>
           <input
             type="password"
@@ -49,22 +53,32 @@ class RegistrationForm extends React.Component {
             required
             onChange={this.handleChange}
           />
-          <button type="submit" disabled={loading}>
+          <br />
+          <Button type="submit" disabled={loading}>
             Register
-          </button>
+          </Button>
         </form>
         {loading && <Spinner name="circle" color="blue" />}
         {error && <p style={{ color: "red" }}>{error.message}</p>}
-      </React.Fragment>
+        {result && (
+          <React.Fragment>
+            <p>Registration Complete! Click Login!</p>
+            <br />
+            <Link to="/">
+              <Button id="loginButton">Login</Button>
+            </Link>
+          </React.Fragment>
+        )}
+      </div>
     );
   }
 }
 
 export default connect(
   state => ({
-    result: state.auth.register.result,
-    loading: state.auth.register.loading,
-    error: state.auth.register.error
+    result: state.users.register.result,
+    loading: state.users.register.loading,
+    error: state.users.register.error
   }),
   { register }
 )(RegistrationForm);
