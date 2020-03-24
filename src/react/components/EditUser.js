@@ -1,7 +1,7 @@
 import React from "react";
 import Spinner from "react-spinkit";
 import { connect } from "react-redux";
-import { edituser } from "../../redux";
+import { edituser, displayprofile } from "../../redux";
 import { Link } from "react-router-dom";
 import { Form } from "react-bootstrap/";
 import { Button } from "react-bootstrap";
@@ -15,6 +15,9 @@ class EditUser extends React.Component {
     document.getElementById("password").value = "";
     document.getElementById("about").value = "";
     document.getElementById("displayName").value = "";
+    setTimeout(() => {
+      this.props.displayprofile();
+    }, 200);
   };
 
   handlechange = e => {
@@ -32,6 +35,7 @@ class EditUser extends React.Component {
               type="text"
               placeholder="About me"
               name="about"
+              value={this.props.currentabout}
               onChange={this.handlechange}
             />
             <Form.Text className="text-muted"></Form.Text>
@@ -41,6 +45,7 @@ class EditUser extends React.Component {
             <Form.Control
               type="text"
               name="displayName"
+              value={this.props.currentdisplayname}
               placeholder="Display Name"
               onChange={this.handlechange}
             />
@@ -80,7 +85,9 @@ export default connect(
   state => ({
     result: state.users.edituser.result,
     loading: state.users.edituser.loading,
-    error: state.users.edituser.error
+    error: state.users.edituser.error,
+    currentabout: state.users.displayprofile.result.user.about,
+    currentdisplayname: state.users.displayprofile.result.user.displayName
   }),
-  { edituser }
+  { edituser, displayprofile }
 )(EditUser);
