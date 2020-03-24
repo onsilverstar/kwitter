@@ -80,15 +80,15 @@ export const displayprofile = displayprofileData => (dispatch, getState) => {
 
 const UPDATEIMAGE = createActions("updateimage");
 
-export const updateimage = formElement => (dispatch, getState) => {
-  console.log(formElement);
+export const updateimage = formData => (dispatch, getState) => {
+  console.log(formData);
   dispatch(UPDATEIMAGE.START());
   const token = getState().auth.login.result.token;
   const loggedInUsername = getState().auth.login.result.username;
   return fetch(url + "/" + loggedInUsername + "/picture", {
     method: "PUT",
     headers: { Authorization: "Bearer " + token, ...multiPartFormDataHeaders },
-    body: formElement
+    body: formData
   })
     .then(handleJsonResponse)
     .then(result => {

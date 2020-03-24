@@ -6,17 +6,28 @@ import Button from "react-bootstrap/Button";
 import "./Profile.css";
 
 class UpdateImage extends React.Component {
-  state = { picture: null };
+  //state = { picture: null };
+  state = {
+    uploading: false,
+    picture: []
+  };
 
   handleUpdateImage = e => {
     e.preventDefault();
-    this.props.updateimage(this.state);
+    //start of new
+    const files = Array.from(this.state.picture);
+    this.setState({ uploading: true });
+    const formData = new FormData();
+
+    formData.append(formData, files);
+
+    this.props.updateimage(formData);
     document.getElementById("updateImage").value = "";
   };
 
   handleChange = e => {
     let imageObjectFile = e.target.files[0];
-    console.log(imageObjectFile);
+    //console.log(imageObjectFile);
 
     this.setState({ picture: imageObjectFile });
   };
