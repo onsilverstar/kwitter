@@ -30,22 +30,20 @@ class EditUser extends React.Component {
       <React.Fragment>
         <Form onSubmit={this.handleEdit}>
           <Form.Group controlId="about">
-            <Form.Label>About</Form.Label>
+            <Form.Label>About- *required</Form.Label>
             <Form.Control
               type="text"
               placeholder="About me"
               name="about"
-              value={this.props.currentabout}
               onChange={this.handlechange}
             />
             <Form.Text className="text-muted"></Form.Text>
           </Form.Group>
           <Form.Group controlId="displayName">
-            <Form.Label>Display Name</Form.Label>
+            <Form.Label>Display Name- *required</Form.Label>
             <Form.Control
               type="text"
               name="displayName"
-              value={this.props.currentdisplayname}
               placeholder="Display Name"
               onChange={this.handlechange}
             />
@@ -53,7 +51,7 @@ class EditUser extends React.Component {
           </Form.Group>
 
           <Form.Group controlId="password">
-            <Form.Label>Password</Form.Label>
+            <Form.Label>Password- *required</Form.Label>
             <Form.Control
               type="password"
               name="password"
@@ -86,8 +84,7 @@ export default connect(
     result: state.users.edituser.result,
     loading: state.users.edituser.loading,
     error: state.users.edituser.error,
-    currentabout: state.users.displayprofile.result.user.about,
-    currentdisplayname: state.users.displayprofile.result.user.displayName
+    displayprofile: state.users.displayprofile
   }),
   { edituser, displayprofile }
 )(EditUser);
