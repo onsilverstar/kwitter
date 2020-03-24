@@ -34,7 +34,7 @@ class App extends React.Component {
       <div className="App">
         <h1>LOGIN WITH FACEBOOK AND GOOGLE</h1>
         <FacebookLogin 
-          appId=''
+          appId='2946986485360576'
           fields='name,email,picture'
           callback={responseFacebook}
         />  
