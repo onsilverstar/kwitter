@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { newmessagefeed } from "../../redux";
+import { newmessagefeed, mymessagefeed } from "../../redux";
 import "./Messages.css";
 import ToggleLike from "./ToggleLike";
 import DeleteLike from "./DeleteLike";
@@ -14,6 +14,7 @@ class NewMessageFeed extends React.Component {
 
   shouldReload = () => {
     setTimeout(() => {
+      this.props.mymessagefeed();
       this.props.newmessagefeed();
     }, 200);
   };
@@ -75,5 +76,5 @@ export default connect(
     error: state.messages.newmessagefeed.error,
     username: state.auth.login.result.username
   }),
-  { newmessagefeed }
+  { newmessagefeed, mymessagefeed }
 )(NewMessageFeed);

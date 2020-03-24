@@ -10,6 +10,11 @@ export const jsonHeaders = {
   Accept: "application/json"
 };
 
+export const multiPartFormDataHeaders = {
+  "Content-Type": "multipart/form-data",
+  Accept: "application/json"
+};
+
 export const handleJsonResponse = res => {
   if (res.ok) {
     return res.json();

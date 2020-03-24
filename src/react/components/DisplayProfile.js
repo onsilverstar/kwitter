@@ -36,7 +36,7 @@ class DisplayProfile extends React.Component {
                 />
               )}
               <br />
-
+              <br />
               <h4>About: {result.user.about}</h4>
             </div>
           )}

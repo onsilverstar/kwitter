@@ -1,6 +1,7 @@
 import {
   domain,
   jsonHeaders,
+  multiPartFormDataHeaders,
   handleJsonResponse,
   getInitStateFromStorage,
   asyncInitialState,
@@ -77,6 +78,26 @@ export const displayprofile = displayprofileData => (dispatch, getState) => {
     .catch(err => Promise.reject(dispatch(DISPLAYPROFILE.FAIL(err))));
 };
 
+const UPDATEIMAGE = createActions("updateimage");
+
+export const updateimage = formElement => (dispatch, getState) => {
+  console.log(formElement);
+  dispatch(UPDATEIMAGE.START());
+  const token = getState().auth.login.result.token;
+  const loggedInUsername = getState().auth.login.result.username;
+  return fetch(url + "/" + loggedInUsername + "/picture", {
+    method: "PUT",
+    headers: { Authorization: "Bearer " + token, ...multiPartFormDataHeaders },
+    body: formElement
+  })
+    .then(handleJsonResponse)
+    .then(result => {
+      dispatch(UPDATEIMAGE.SUCCESS(result));
+      dispatch(DISPLAYPROFILE.START());
+    })
+    .catch(err => Promise.reject(dispatch(UPDATEIMAGE.FAIL(err))));
+};
+
 export const reducers = {
   register: createReducer(asyncInitialState, {
     ...asyncCases(REGISTER)
@@ -93,5 +114,8 @@ export const reducers = {
   }),
   displayprofile: createReducer(asyncInitialState, {
     ...asyncCases(DISPLAYPROFILE)
+  }),
+  updateimage: createReducer(asyncInitialState, {
+    ...asyncCases(UPDATEIMAGE)
   })
 };
