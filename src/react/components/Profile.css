@@ -40,3 +40,7 @@ h2 {
 .card {
   padding: 20px;
 }
+.defaultImage {
+  width: 100%;
+  border-radius: 1em;
+}
