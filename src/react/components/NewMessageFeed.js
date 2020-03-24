@@ -1,13 +1,22 @@
 import React from "react";
 import { connect } from "react-redux";
-import { newmessagefeed } from "../../redux";
+import { newmessagefeed, mymessagefeed } from "../../redux";
 import "./Messages.css";
 import ToggleLike from "./ToggleLike";
 import DeleteLike from "./DeleteLike";
 
 class NewMessageFeed extends React.Component {
+  state = { reload: false };
+
   populateMessageFeed = () => {
     this.props.newmessagefeed();
+  };
+
+  shouldReload = () => {
+    setTimeout(() => {
+      this.props.mymessagefeed();
+      this.props.newmessagefeed();
+    }, 200);
   };
 
   componentDidMount() {
@@ -19,9 +28,19 @@ class NewMessageFeed extends React.Component {
       like => like.username === this.props.username
     );
     if (filteredMessageLikes.length > 0) {
-      return <DeleteLike likesId={filteredMessageLikes[0].id} />;
+      return (
+        <DeleteLike
+          likesId={filteredMessageLikes[0].id}
+          reloadParent={this.shouldReload.bind(this)}
+        />
+      );
     } else {
-      return <ToggleLike messageId={messageId} />;
+      return (
+        <ToggleLike
+          messageId={messageId}
+          reloadParent={this.shouldReload.bind(this)}
+        />
+      );
     }
   };
 
@@ -57,5 +76,5 @@ export default connect(
     error: state.messages.newmessagefeed.error,
     username: state.auth.login.result.username
   }),
-  { newmessagefeed }
+  { newmessagefeed, mymessagefeed }
 )(NewMessageFeed);

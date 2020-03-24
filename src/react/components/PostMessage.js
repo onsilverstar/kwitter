@@ -1,7 +1,7 @@
 import React from "react";
 import Spinner from "react-spinkit";
 import { connect } from "react-redux";
-import { postmessage } from "../../redux";
+import { postmessage, mymessagefeed, newmessagefeed } from "../../redux";
 import Button from "react-bootstrap/Button";
 import "./Messages.css";
 
@@ -12,6 +12,10 @@ class PostMessage extends React.Component {
     e.preventDefault();
     this.props.postmessage(this.state);
     document.getElementById("postMessage").value = "";
+    setTimeout(() => {
+      this.props.mymessagefeed();
+      this.props.newmessagefeed();
+    }, 200);
   };
 
   handleChange = e => {
@@ -29,7 +33,7 @@ class PostMessage extends React.Component {
             id="postMessage"
             placeholder="new message here"
             rows="8"
-            columns="48"
+            columns="28"
             width="100%"
             autoFocus
             required
@@ -52,5 +56,5 @@ export default connect(
     loading: state.messages.postmessage.loading,
     error: state.messages.postmessage.error
   }),
-  { postmessage }
+  { postmessage, mymessagefeed, newmessagefeed }
 )(PostMessage);

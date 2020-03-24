@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { mymessagefeed } from "../../redux";
+import { mymessagefeed, newmessagefeed } from "../../redux";
 import "./Messages.css";
 import DeleteMessage from "../components/DeleteMessage";
 import ToggleLike from "./ToggleLike";
@@ -13,6 +13,13 @@ class MyMessageFeed extends React.Component {
     this.props.mymessagefeed();
   };
 
+  shouldReload = () => {
+    setTimeout(() => {
+      this.props.mymessagefeed();
+      this.props.newmessagefeed();
+    }, 200);
+  };
+
   componentDidMount() {
     this.populateMessageFeed();
   }
@@ -22,9 +29,19 @@ class MyMessageFeed extends React.Component {
       like => like.username === this.props.username
     );
     if (filteredMessageLikes.length > 0) {
-      return <DeleteLike likesId={filteredMessageLikes[0].id} />;
+      return (
+        <DeleteLike
+          likesId={filteredMessageLikes[0].id}
+          reloadParent={this.shouldReload.bind(this)}
+        />
+      );
     } else {
-      return <ToggleLike messageId={messageId} />;
+      return (
+        <ToggleLike
+          messageId={messageId}
+          reloadParent={this.shouldReload.bind(this)}
+        />
+      );
     }
   };
 
@@ -43,7 +60,10 @@ class MyMessageFeed extends React.Component {
                   <div>
                     {this.likeOrUnlike(message.id, message.likes)} |{" "}
                     {message.likes.length} |{" "}
-                    <DeleteMessage messageId={message.id} />
+                    <DeleteMessage
+                      messageId={message.id}
+                      reloadParent={this.shouldReload.bind(this)}
+                    />
                   </div>
                 </div>
               </div>
@@ -61,5 +81,5 @@ export default connect(
     error: state.messages.mymessagefeed.error,
     username: state.auth.login.result.username
   }),
-  { mymessagefeed }
+  { mymessagefeed, newmessagefeed }
 )(MyMessageFeed);

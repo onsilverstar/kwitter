@@ -1,7 +1,7 @@
 import React from "react";
 import Spinner from "react-spinkit";
 import { connect } from "react-redux";
-import { edituser } from "../../redux";
+import { edituser, displayprofile } from "../../redux";
 import { Link } from "react-router-dom";
 import { Form } from "react-bootstrap/";
 import { Button } from "react-bootstrap";
@@ -15,6 +15,9 @@ class EditUser extends React.Component {
     document.getElementById("password").value = "";
     document.getElementById("about").value = "";
     document.getElementById("displayName").value = "";
+    setTimeout(() => {
+      this.props.displayprofile();
+    }, 200);
   };
 
   handlechange = e => {
@@ -27,7 +30,7 @@ class EditUser extends React.Component {
       <React.Fragment>
         <Form onSubmit={this.handleEdit}>
           <Form.Group controlId="about">
-            <Form.Label>About</Form.Label>
+            <Form.Label>About- *required</Form.Label>
             <Form.Control
               type="text"
               placeholder="About me"
@@ -37,7 +40,7 @@ class EditUser extends React.Component {
             <Form.Text className="text-muted"></Form.Text>
           </Form.Group>
           <Form.Group controlId="displayName">
-            <Form.Label>Display Name</Form.Label>
+            <Form.Label>Display Name- *required</Form.Label>
             <Form.Control
               type="text"
               name="displayName"
@@ -48,7 +51,7 @@ class EditUser extends React.Component {
           </Form.Group>
 
           <Form.Group controlId="password">
-            <Form.Label>Password</Form.Label>
+            <Form.Label>Password- *required</Form.Label>
             <Form.Control
               type="password"
               name="password"
@@ -80,7 +83,8 @@ export default connect(
   state => ({
     result: state.users.edituser.result,
     loading: state.users.edituser.loading,
-    error: state.users.edituser.error
+    error: state.users.edituser.error,
+    displayprofile: state.users.displayprofile
   }),
-  { edituser }
+  { edituser, displayprofile }
 )(EditUser);

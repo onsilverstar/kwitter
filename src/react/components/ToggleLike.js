@@ -8,6 +8,7 @@ class ToggleLike extends React.Component {
   toggleLike = (e, messageId) => {
     e.preventDefault();
     this.props.togglelike(this.state);
+    this.props.reloadParent();
   };
 
   render() {
