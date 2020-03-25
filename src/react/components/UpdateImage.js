@@ -1,26 +1,24 @@
 import React from "react";
 import Spinner from "react-spinkit";
 import { connect } from "react-redux";
-import { updateimage, displayprofile } from "../../redux";
+import { updateimage } from "../../redux";
 import Button from "react-bootstrap/Button";
 import "./Profile.css";
 
 class UpdateImage extends React.Component {
+  state = { picture: null };
+
   handleUpdateImage = e => {
     e.preventDefault();
-    const formData = new FormData(e.target);
-    this.props.updateimage(formData);
-    document.getElementById("picture").value = "";
-    setTimeout(() => {
-      this.props.displayprofile();
-    }, 500);
+    this.props.updateimage(this.state);
+    document.getElementById("updateImage").value = "";
   };
 
   handleChange = e => {
     let imageObjectFile = e.target.files[0];
     console.log(imageObjectFile);
 
-    this.setState({ picture: { picture: imageObjectFile } });
+    this.setState({ picture: imageObjectFile });
   };
 
   render() {
@@ -30,11 +28,12 @@ class UpdateImage extends React.Component {
         <form id="updateimage-form" onSubmit={this.handleUpdateImage}>
           <input
             type="file"
-            name="picture"
-            id="picture"
+            name="updateImage"
+            id="updateImage"
             width="100%"
             accept="image/*"
             required
+            onChange={this.handleChange}
           />
           <br />
           <br />
@@ -51,8 +50,7 @@ export default connect(
   state => ({
     result: state.users.updateimage.result,
     loading: state.users.updateimage.loading,
-    error: state.users.updateimage.error,
-    loggedinusername: state.auth.login.result.username
+    error: state.users.updateimage.error
   }),
-  { updateimage, displayprofile }
+  { updateimage }
 )(UpdateImage);

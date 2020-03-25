@@ -7,7 +7,9 @@ import Messages from "./Messages";
 import NotFound from "./NotFound";
 
 class App extends React.Component {
+
   render() {
+    
     return (
       <Switch>
         <Route exact path="/" component={Home} />
