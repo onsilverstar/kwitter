@@ -2,10 +2,10 @@ import React from "react";
 import { connect } from "react-redux";
 import { displayprofile } from "../../redux";
 import "./Profile.css";
-import { Card, Button } from "semantic-ui-react";
-class DisplayProfile extends React.Component {
-  //state = { username: "" };
+import { Card } from "semantic-ui-react";
+import defaultImage from "../../../src/images/default-user.png";
 
+class DisplayProfile extends React.Component {
   populateDisplayProfile = () => {
     this.props.displayprofile();
   };
@@ -26,13 +26,18 @@ class DisplayProfile extends React.Component {
               {result.user.pictureLocation === null ? (
                 <div>
                   <br />
-                  <Button>ADD PROFILE IMAGE</Button>
+                  <img
+                    src={defaultImage}
+                    alt="default"
+                    className="profileImage"
+                  />
                   <br />
                 </div>
               ) : (
                 <img
                   src={`https://kwitter-api.herokuapp.com/users/${this.props.result.user.username}/picture`}
                   alt="User Profile"
+                  className="profileImage"
                 />
               )}
               <br />
