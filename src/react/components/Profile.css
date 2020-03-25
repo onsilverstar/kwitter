@@ -9,7 +9,7 @@ h2 {
 .profileColumn {
   background-color: lightgrey;
   margin: 10px;
-  padding: 10px;
+  padding: 20px;
   flex-basis: 50%;
   border-radius: 1em;
 }

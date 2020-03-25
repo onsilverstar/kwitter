@@ -37,6 +37,7 @@ class DisplayProfile extends React.Component {
                 <img
                   src={`https://kwitter-api.herokuapp.com/users/${this.props.result.user.username}/picture`}
                   alt="User Profile"
+                  className="profileImage"
                 />
               )}
               <br />
