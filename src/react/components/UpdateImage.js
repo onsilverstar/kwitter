@@ -11,9 +11,6 @@ class UpdateImage extends React.Component {
     let formData = new FormData(e.target);
     this.props.updateimage(formData);
     //document.getElementById("updateImage").value = "";
-    setTimeout(() => {
-      this.props.displayprofile();
-    }, 200);
   };
 
   render() {
