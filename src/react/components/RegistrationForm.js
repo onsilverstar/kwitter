@@ -21,6 +21,10 @@ class RegistrationForm extends React.Component {
     this.setState({ [e.target.name]: e.target.value });
   };
 
+  componentDidMount() {
+    document.body.scrollTop = 0;
+  }
+
   render() {
     const { loading, error, result } = this.props;
     return (

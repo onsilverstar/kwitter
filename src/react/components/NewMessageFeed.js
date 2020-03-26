@@ -59,7 +59,7 @@ class NewMessageFeed extends React.Component {
                   <p>{message.text}</p>
                   <div>
                     {this.likeOrUnlike(message.id, message.likes)} |{" "}
-                    {message.likes.length}
+                    <span className="likesCount">{message.likes.length}</span>
                   </div>
                 </div>
               </div>
