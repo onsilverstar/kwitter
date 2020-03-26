@@ -19,7 +19,7 @@ export class Header extends React.Component {
               <p>
                 YOU NEED ANONYMOUS SUPPORT.
                 <br />
-                QUITTERS GIVE YOU THAT 1 ON 1 SUPPORT.
+                QUITTERS GIVES YOU THAT 1 ON 1 SUPPORT TO SUCCEED.
               </p>
               <Link to="/#yourAnchorTag">
                 <Button variant="danger" className="header-button">
@@ -35,7 +35,7 @@ export class Header extends React.Component {
               <p>
                 YOU NEED ANONYMOUS SUPPORT.
                 <br />
-                QUITTERS GIVE YOU THAT 1 ON 1 SUPPORT.
+                QUITTERS GIVES YOU THAT 1 ON 1 SUPPORT TO SUCCEED.
               </p>
               <Link to="/#yourAnchorTag">
                 <Button variant="danger" className="header-button">
@@ -52,7 +52,7 @@ export class Header extends React.Component {
               <p>
                 YOU NEED ANONYMOUS SUPPORT.
                 <br />
-                QUITTERS GIVE YOU THAT 1 ON 1 SUPPORT.
+                QUITTERS GIVES YOU THAT 1 ON 1 SUPPORT TO SUCCEED.
               </p>
               <Link to="/#yourAnchorTag">
                 <Button variant="danger" className="header-button">

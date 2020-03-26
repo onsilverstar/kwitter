@@ -23,6 +23,7 @@ class MyMessageFeed extends React.Component {
 
   componentDidMount() {
     this.populateMessageFeed();
+    document.body.scrollTop = 0;
   }
 
   likeOrUnlike = (messageId, likesArray) => {

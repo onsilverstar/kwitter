@@ -17,7 +17,7 @@ export class Header2 extends React.Component {
               <p>
                 YOU NEED ANONYMOUS SUPPORT.
                 <br />
-                QUITTERS GIVE YOU THAT 1 ON 1 SUPPORT.
+                QUITTERS GIVES YOU THAT 1 ON 1 SUPPORT TO SUCCEED.
               </p>
             </Carousel.Caption>
           </Carousel.Item>
@@ -28,7 +28,7 @@ export class Header2 extends React.Component {
               <p>
                 YOU NEED ANONYMOUS SUPPORT.
                 <br />
-                QUITTERS GIVE YOU THAT 1 ON 1 SUPPORT.
+                QUITTERS GIVES YOU THAT 1 ON 1 SUPPORT TO SUCCEED.
               </p>
             </Carousel.Caption>
           </Carousel.Item>
@@ -40,7 +40,7 @@ export class Header2 extends React.Component {
               <p>
                 YOU NEED ANONYMOUS SUPPORT.
                 <br />
-                QUITTERS GIVE YOU THAT 1 ON 1 SUPPORT.
+                QUITTERS GIVES YOU THAT 1 ON 1 SUPPORT TO SUCCEED.
               </p>
             </Carousel.Caption>
           </Carousel.Item>
