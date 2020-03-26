@@ -1,14 +1,8 @@
-.footer {
-  background-color: grey;
-  border-top: 1px solid lightgray;
-  height: 300px;
-  position: relative;
-  bottom: -450px;
-}
 .mainContentWrapperHome {
   margin-left: 50px;
   margin-right: 50px;
   height: 450px;
+  display: block;
 }
 
 .mainContentWrapperHome h2 {
