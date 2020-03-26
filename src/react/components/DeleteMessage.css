@@ -1,0 +1,20 @@
+.sliderWrapper .deleteMessageButton {
+  color: #fff;
+  background-color: #e21b1b;
+  border-color: #aa1717;
+  padding-right: 0px;
+  padding-left: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.sliderWrapper .deleteMessageButton:hover,
+.sliderWrapper .deleteMessageButton:visited,
+.sliderWrapper .deleteMessageButton:focus {
+  color: #fff;
+  background-color: #aa1717;
+  border-color: #e21b1b;
+  padding-right: 0px;
+  padding-left: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}

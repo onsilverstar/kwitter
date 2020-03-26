@@ -16,6 +16,7 @@ class DeleteMessage extends React.Component {
 
     return (
       <Button
+        className="deleteMessageButton"
         variant="danger"
         onClick={e => this.deleteMessage(e, this.props.messageId)}
       >

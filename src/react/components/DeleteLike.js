@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { deletelike } from "../../redux";
 import Button from "react-bootstrap/Button";
+import "./DeleteLike.css";
 
 class DeleteLike extends React.Component {
   deleteLike = e => {
@@ -13,6 +14,7 @@ class DeleteLike extends React.Component {
   render() {
     return (
       <Button
+        className="deleteLikeButton"
         variant="danger"
         onClick={e => this.deleteLike(e, this.props.likeId)}
       >

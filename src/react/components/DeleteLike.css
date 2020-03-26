@@ -1,0 +1,20 @@
+.sliderWrapper .deleteLikeButton {
+  color: #fff;
+  background-color: #e21b1b;
+  border-color: #aa1717;
+  padding-right: 0px;
+  padding-left: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.sliderWrapper .deleteLikeButton:hover,
+.sliderWrapper .deleteLikeButton:visited,
+.sliderWrapper .deleteLikeButton:focus {
+  color: #fff;
+  background-color: #aa1717;
+  border-color: #e21b1b;
+  padding-right: 0px;
+  padding-left: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}

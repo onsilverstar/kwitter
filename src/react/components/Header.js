@@ -22,7 +22,9 @@ export class Header extends React.Component {
                 QUITTERS GIVE YOU THAT 1 ON 1 SUPPORT.
               </p>
               <Link to="/#yourAnchorTag">
-                <Button variant="danger">JOIN TODAY</Button>
+                <Button variant="danger" className="header-button">
+                  JOIN TODAY
+                </Button>
               </Link>
             </Carousel.Caption>
           </Carousel.Item>
@@ -36,7 +38,9 @@ export class Header extends React.Component {
                 QUITTERS GIVE YOU THAT 1 ON 1 SUPPORT.
               </p>
               <Link to="/#yourAnchorTag">
-                <Button variant="danger">JOIN TODAY</Button>
+                <Button variant="danger" className="header-button">
+                  JOIN TODAY
+                </Button>
               </Link>
             </Carousel.Caption>
           </Carousel.Item>
@@ -51,7 +55,9 @@ export class Header extends React.Component {
                 QUITTERS GIVE YOU THAT 1 ON 1 SUPPORT.
               </p>
               <Link to="/#yourAnchorTag">
-                <Button variant="danger">JOIN TODAY</Button>
+                <Button variant="danger" className="header-button">
+                  JOIN TODAY
+                </Button>
               </Link>
             </Carousel.Caption>
           </Carousel.Item>
