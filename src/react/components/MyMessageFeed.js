@@ -61,7 +61,7 @@ class MyMessageFeed extends React.Component {
                   <p>{message.text}</p>
                   <div>
                     {this.likeOrUnlike(message.id, message.likes)} |{" "}
-                    {message.likes.length} |{" "}
+                    <span className="likesCount">{message.likes.length}</span> |{" "}
                     <DeleteMessage
                       messageId={message.id}
                       reloadParent={this.shouldReload.bind(this)}
