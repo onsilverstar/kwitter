@@ -50,7 +50,7 @@ class LoginForm extends React.Component {
         <p>* If you do not have an account, register below.</p>
         <Link to="/register">
           <Button variant="danger" id="registerButton">
-            Register New User
+            Register User
           </Button>
         </Link>
       </div>
