@@ -8,9 +8,9 @@ import DeleteLike from "./DeleteLike";
 class TopMessageFeed extends React.Component {
   state = { topMessagesArray: {} };
 
-  //   populateMessageFeed = () => {
-  //     this.props.topmessagefeed();
-  //   };
+  populateMessageFeed = () => {
+    this.props.topmessagefeed();
+  };
 
   shouldReload = () => {
     setTimeout(() => {
@@ -20,9 +20,32 @@ class TopMessageFeed extends React.Component {
     }, 200);
   };
 
+  displayTop = props => {
+    let fullFeed = this.props.result.messages;
+    fullFeed = fullFeed.slice().sort(function(a, b) {
+      return b.likes.length - a.likes.length;
+    });
+
+    const isReady = props.isReady;
+    if (isReady) {
+      return fullFeed.map(message => (
+        <div key={message.id}>
+          <div className="messageFeedMessage">
+            <h2>{message.username}</h2>
+            <p>{message.text}</p>
+            <div>
+              {this.likeOrUnlike(message.id, message.likes)} |{" "}
+              <span className="likesCount">{message.likes.length}</span>
+            </div>
+          </div>
+        </div>
+      ));
+    }
+    return;
+  };
+
   componentDidMount() {
-    //this.populateMessageFeed();
-    this.props.topmessagefeed();
+    this.populateMessageFeed();
   }
 
   likeOrUnlike = (messageId, likesArray) => {
@@ -46,38 +69,13 @@ class TopMessageFeed extends React.Component {
     }
   };
 
-  sortTopMessages() {
-    let fullFeed = this.props.result.messages;
-    fullFeed = fullFeed.slice().sort(function(a, b) {
-      return b.likes.length - a.likes.length;
-    });
-    console.log(fullFeed);
-    this.mapForDisplay(fullFeed);
-  }
-
-  mapForDisplay(fullFeed) {
-    //console.log(fullFeed);
-    return fullFeed.map(message => (
-      <div key={message.id}>
-        <div className="messageFeedMessage">
-          <h2>{message.username}</h2>
-          <p>{message.text}</p>
-          <div>
-            {this.likeOrUnlike(message.id, message.likes)} |{" "}
-            {message.likes.length}
-          </div>
-        </div>
-      </div>
-    ));
-  }
-
   render() {
     const { result } = this.props;
 
     return (
       <div>
         <div className="topMessageFeedWrapper">
-          {result && this.sortTopMessages()}
+          {result && <this.displayTop isReady={true} />}
         </div>
       </div>
     );
