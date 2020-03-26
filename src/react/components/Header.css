@@ -21,7 +21,7 @@
   text-shadow: 2px 2px 2px #555;
 }
 
-.sliderWrapper .btn-primary {
+.sliderWrapper .btn-danger {
   color: #fff;
   background-color: #e21b1b;
   border-color: #aa1717;
@@ -31,11 +31,11 @@
   padding-bottom: 10px;
   font-size: 20px;
 }
-.sliderWrapper .btn-primary:hover,
-.sliderWrapper .btn-primary:active,
-.sliderWrapper .btn-primary:visited,
-.sliderWrapper .btn-primary:focus,
-.btn-primary {
+.sliderWrapper .btn-danger:hover,
+.sliderWrapper .btn-danger:active,
+.sliderWrapper .btn-danger:visited,
+.sliderWrapper .btn-danger:focus,
+.btn-danger {
   color: #fff;
   background-color: #aa1717;
   border-color: #e21b1b;

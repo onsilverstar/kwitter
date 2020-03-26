@@ -41,7 +41,7 @@ class LoginForm extends React.Component {
             onChange={this.handleChange}
           />
           <br />
-          <Button type="submit" disabled={loading}>
+          <Button variant="danger" type="submit" disabled={loading}>
             Login
           </Button>
         </form>
@@ -49,7 +49,9 @@ class LoginForm extends React.Component {
         {error && <p style={{ color: "red" }}>{error.message}</p>}
         <p>* If you do not have an account, register below.</p>
         <Link to="/register">
-          <Button id="registerButton">Register New User</Button>
+          <Button variant="danger" id="registerButton">
+            Register New User
+          </Button>
         </Link>
       </div>
     );

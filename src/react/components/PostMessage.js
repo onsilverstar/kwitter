@@ -41,7 +41,9 @@ class PostMessage extends React.Component {
           />
           <br />
           <br />
-          <Button type="submit">Submit Post</Button>
+          <Button variant="danger" type="submit">
+            Submit Post
+          </Button>
         </form>
         {loading && <Spinner name="circle" color="blue" />}
         {error && <p style={{ color: "red" }}>{error.message}</p>}

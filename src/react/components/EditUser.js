@@ -56,7 +56,7 @@ class EditUser extends React.Component {
               onChange={this.handlechange}
             />
           </Form.Group>
-          <Button variant="primary" type="submit" disabled={loading}>
+          <Button variant="danger" type="submit" disabled={loading}>
             Submit
           </Button>
         </Form>
@@ -67,7 +67,9 @@ class EditUser extends React.Component {
             <p>Changes made.</p>
             <br />
             <Link to="/">
-              <Button id="editButton">Edit user</Button>
+              <Button variant="danger" id="editButton">
+                Edit user
+              </Button>
             </Link>
           </React.Fragment>
         )}

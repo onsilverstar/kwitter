@@ -54,7 +54,7 @@ class RegistrationForm extends React.Component {
             onChange={this.handleChange}
           />
           <br />
-          <Button type="submit" disabled={loading}>
+          <Button variant="danger" type="submit" disabled={loading}>
             Register
           </Button>
         </form>
@@ -65,7 +65,9 @@ class RegistrationForm extends React.Component {
             <p>Registration Complete! Click Login!</p>
             <br />
             <Link to="/">
-              <Button id="loginButton">Login</Button>
+              <Button variant="danger" id="loginButton">
+                Login
+              </Button>
             </Link>
           </React.Fragment>
         )}

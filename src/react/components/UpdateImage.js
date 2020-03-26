@@ -27,7 +27,9 @@ class UpdateImage extends React.Component {
           />
           <br />
           <br />
-          <Button type="submit">Submit</Button>
+          <Button variant="danger" type="submit">
+            Submit
+          </Button>
         </form>
         {loading && <Spinner name="circle" color="blue" />}
         {error && <p style={{ color: "red" }}>{error.message}</p>}
