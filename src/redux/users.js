@@ -42,7 +42,8 @@ export const edituser = edituserData => (dispatch, getState) => {
   })
     .then(handleJsonResponse)
     .then(result => {
-      return dispatch(EDITUSER.SUCCESS(result));
+      dispatch(EDITUSER.SUCCESS(result));
+      dispatch(displayprofile());
     })
     .catch(err => Promise.reject(dispatch(EDITUSER.FAIL(err))));
 };
@@ -91,6 +92,7 @@ export const updateimage = formData => (dispatch, getState) => {
     .then(handleJsonResponse)
     .then(result => {
       dispatch(UPDATEIMAGE.SUCCESS(result));
+      dispatch(displayprofile());
     })
     .catch(err => Promise.reject(dispatch(UPDATEIMAGE.FAIL(err))));
 };

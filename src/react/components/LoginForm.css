@@ -12,3 +12,10 @@
   float: left;
   padding-bottom: 20px;
 }
+.footer {
+  background-color: grey;
+  border-top: 1px solid lightgray;
+  height: 300px;
+  position: relative;
+  bottom: -450px;
+}

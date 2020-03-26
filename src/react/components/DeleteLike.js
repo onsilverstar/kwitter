@@ -12,7 +12,10 @@ class DeleteLike extends React.Component {
 
   render() {
     return (
-      <Button onClick={e => this.deleteLike(e, this.props.likeId)}>
+      <Button
+        variant="danger"
+        onClick={e => this.deleteLike(e, this.props.likeId)}
+      >
         Unlike
       </Button>
     );

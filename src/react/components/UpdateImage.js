@@ -10,10 +10,6 @@ class UpdateImage extends React.Component {
     e.preventDefault();
     let formData = new FormData(e.target);
     this.props.updateimage(formData);
-    //document.getElementById("updateImage").value = "";
-    setTimeout(() => {
-      this.props.displayprofile();
-    }, 200);
   };
 
   render() {
@@ -31,7 +27,9 @@ class UpdateImage extends React.Component {
           />
           <br />
           <br />
-          <Button type="submit">Submit</Button>
+          <Button variant="danger" type="submit">
+            Submit
+          </Button>
         </form>
         {loading && <Spinner name="circle" color="blue" />}
         {error && <p style={{ color: "red" }}>{error.message}</p>}

@@ -67,6 +67,22 @@ export const postmessage = messageData => (dispatch, getState) => {
     .catch(err => Promise.reject(dispatch(POSTMESSAGE.FAIL(err))));
 };
 
+const TOPMESSAGEFEED = createActions("topmessagefeed");
+
+export const topmessagefeed = topmessagefeedData => dispatch => {
+  dispatch(TOPMESSAGEFEED.START());
+  return fetch(url + "?offset=0", {
+    method: "GET",
+    headers: jsonHeaders,
+    body: JSON.stringify(topmessagefeedData)
+  })
+    .then(handleJsonResponse)
+    .then(result => {
+      dispatch(TOPMESSAGEFEED.SUCCESS(result));
+    })
+    .catch(err => Promise.reject(dispatch(TOPMESSAGEFEED.FAIL(err))));
+};
+
 export const reducers = {
   newmessagefeed: createReducer(asyncInitialState, {
     ...asyncCases(NEWMESSAGEFEED)
@@ -79,5 +95,8 @@ export const reducers = {
   }),
   postmessage: createReducer(asyncInitialState, {
     ...asyncCases(POSTMESSAGE)
+  }),
+  topmessagefeed: createReducer(asyncInitialState, {
+    ...asyncCases(TOPMESSAGEFEED)
   })
 };
