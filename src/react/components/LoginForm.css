@@ -19,3 +19,6 @@
   position: relative;
   bottom: -450px;
 }
+#registerButton {
+  width: 100%;
+}

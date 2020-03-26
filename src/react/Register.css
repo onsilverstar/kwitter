@@ -16,3 +16,18 @@
   position: relative;
   bottom: -450px;
 }
+
+.btn-danger {
+  color: #fff;
+  background-color: #e21b1b;
+  border-color: #aa1717;
+}
+.btn-danger:hover,
+.btn-danger:active,
+.btn-danger:visited,
+.btn-danger:focus,
+.btn-danger {
+  color: #fff;
+  background-color: #aa1717;
+  border-color: #e21b1b;
+}
