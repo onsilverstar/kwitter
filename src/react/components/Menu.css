@@ -1,26 +1,46 @@
 #menu {
-  background-color: #b6c7b5;
+  background-image: linear-gradient(black, lightgrey);
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   padding: 0 1em;
-  border-radius: 1em;
-  height: 150px;
-  margin-left: 10px;
-  margin-right: 10px;
+  height: 70px;
+  margin-bottom: 10px;
+  border-top: solid #888 1px;
+  border-bottom: solid #888 1px;
+}
+
+.logoImage {
+  margin-top: 9px;
+  max-height: 50px;
 }
 
 #menu-links {
   display: flex;
   padding-left: 1em;
   position: relative;
-  top: 15px;
+  top: 10px;
   font-size: 20px;
 }
 
 #menu-links a {
-  padding-right: 0.5em;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #ffffff40;
+  padding: 10px;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-right: 8px;
+}
+
+#menu-links a:hover {
   color: black;
   text-decoration: none;
   cursor: pointer;
+  background-color: #ffffff50;
+  padding: 10px;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-right: 8px;
 }

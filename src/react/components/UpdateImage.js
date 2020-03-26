@@ -10,7 +10,6 @@ class UpdateImage extends React.Component {
     e.preventDefault();
     let formData = new FormData(e.target);
     this.props.updateimage(formData);
-    //document.getElementById("updateImage").value = "";
   };
 
   render() {

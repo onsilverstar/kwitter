@@ -1,0 +1,54 @@
+.slideHeader {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  font-size: 5em;
+}
+
+.carousel-caption p {
+  font-size: 2em;
+}
+
+.sliderWrapper .carousel-caption {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  text-align: left;
+  text-shadow: 2px 2px 2px #555;
+}
+
+.sliderWrapper .btn-primary {
+  color: #fff;
+  background-color: #e21b1b;
+  border-color: #aa1717;
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 20px;
+}
+.sliderWrapper .btn-primary:hover,
+.sliderWrapper .btn-primary:active,
+.sliderWrapper .btn-primary:visited,
+.sliderWrapper .btn-primary:focus,
+.btn-primary {
+  color: #fff;
+  background-color: #aa1717;
+  border-color: #e21b1b;
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 20px;
+}
+
+.sliderWrapper .carousel-control-next-icon {
+  display: none;
+}
+.sliderWrapper .carousel-control-prev-icon {
+  display: none;
+}

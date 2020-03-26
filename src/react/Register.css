@@ -1,0 +1,18 @@
+.mainContentWrapperRegister {
+  margin-left: 50px;
+  margin-right: 50px;
+  height: 400px;
+}
+
+.mainContentWrapper h2 {
+  margin-left: -25px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.footer {
+  background-color: grey;
+  border-top: 1px solid lightgray;
+  height: 300px;
+  position: relative;
+  bottom: -450px;
+}

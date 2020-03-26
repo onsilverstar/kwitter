@@ -5,8 +5,8 @@
   background-color: lightgrey;
   margin: 10px;
   padding: 20px;
-  flex-basis: 33.3%;
   border-radius: 1em;
+  flex-basis: 33.3%;
   max-width: 33.3%;
 }
 .messageFeedWrapper {
@@ -14,7 +14,15 @@
   padding-right: 5px;
   padding-bottom: 5px;
   padding-top: 5px;
-  height: 450px;
+  height: 660px;
+  overflow: auto;
+}
+.topMessageFeedWrapper {
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  height: 268px;
   overflow: auto;
 }
 .messageFeedMessage {
@@ -29,11 +37,13 @@
   margin-left: 4px;
 }
 
+.firstMessageColumn {
+  flex-basis: 33.3%;
+}
 .postMessageColumn {
   background-color: lightgrey;
   margin: 10px;
   padding: 20px;
-  flex-basis: 33.3%;
   height: 350px;
   border-radius: 1em;
 }
@@ -41,7 +51,4 @@ textarea {
   width: 98%;
   position: relative;
   top: 5px;
-}
-h2 {
-  max-width: 700px;
 }
