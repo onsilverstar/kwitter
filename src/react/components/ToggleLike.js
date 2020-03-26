@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { togglelike } from "../../redux";
 import Button from "react-bootstrap/Button";
+import "./ToggleLike.css";
 
 class ToggleLike extends React.Component {
   state = { messageId: this.props.messageId };
@@ -15,6 +16,7 @@ class ToggleLike extends React.Component {
   render() {
     return (
       <Button
+        className="likeButton"
         variant="danger"
         onClick={e => this.toggleLike(e, this.props.messageId)}
       >
