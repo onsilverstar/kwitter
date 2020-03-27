@@ -8,6 +8,22 @@
   margin-left: -25px;
   margin-top: 25px;
   margin-bottom: 25px;
+  position: relative;
+  left: 36px;
+  top: 5px;
+  font-size: 4vw;
+}
+.profileWrapper {
+  display: flex;
+  margin-right: 3%;
+}
+.profileColumn {
+  background-color: lightgrey;
+  margin: 10px;
+  padding: 20px;
+  flex-basis: 50%;
+  border-radius: 1em;
+  min-width: 50%;
 }
 .btn-danger {
   color: #fff;
@@ -22,4 +38,31 @@
   color: #fff;
   background-color: #aa1717;
   border-color: #e21b1b;
+}
+.mainContentWrapper .h3,
+.mainContentWrapper h3 {
+  font-size: 3vw;
+}
+.mainContentWrapper .h4,
+.mainContentWrapper h4 {
+  font-size: 2.5vw;
+}
+
+@media only screen and (max-width: 780px) {
+  .profileWrapper {
+    display: flex;
+    flex-direction: column;
+    margin-right: 0;
+  }
+  .mainContentWrapper h2 {
+    font-size: 6vw;
+  }
+  .mainContentWrapper .h3,
+  .mainContentWrapper h3 {
+    font-size: 5vw;
+  }
+  .mainContentWrapper .h4,
+  .mainContentWrapper h4 {
+    font-size: 3.5vw;
+  }
 }

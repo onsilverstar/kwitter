@@ -2,11 +2,11 @@
   position: relative;
   top: 0px;
   left: 0px;
-  font-size: 5em;
+  font-size: 6vw;
 }
 
-.carousel-caption p {
-  font-size: 2em;
+.slideParagraph {
+  font-size: 2vw;
 }
 
 .sliderWrapper .carousel-caption {
@@ -29,7 +29,7 @@
   padding-left: 50px;
   padding-top: 10px;
   padding-bottom: 10px;
-  font-size: 20px;
+  font-size: 2vw;
 }
 .sliderWrapper .header-button:hover,
 .sliderWrapper .header-button:visited,
@@ -41,7 +41,7 @@
   padding-left: 50px;
   padding-top: 10px;
   padding-bottom: 10px;
-  font-size: 20px;
+  font-size: 2vw;
 }
 
 .sliderWrapper .carousel-control-next-icon {
@@ -49,4 +49,8 @@
 }
 .sliderWrapper .carousel-control-prev-icon {
   display: none;
+}
+
+.slideLogo {
+  width: 60%;
 }

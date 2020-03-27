@@ -26,7 +26,7 @@ class Messages extends React.Component {
               </div>
               <br />
               <div className="postMessageColumn">
-                <h3>Top Trending Messages</h3>
+                <h3>Top Trending</h3>
                 <TopMessageFeed />
               </div>
             </div>

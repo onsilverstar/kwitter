@@ -2,17 +2,17 @@
   position: relative;
   top: 0px;
   left: 0px;
-  font-size: 5em;
+  font-size: 6vw;
 }
 
-.carousel-caption p {
-  font-size: 2em;
+.slideParagraph {
+  font-size: 2vw;
 }
 
 .sliderWrapper .carousel-caption {
   position: absolute;
-  top: 25px;
-  left: 100px;
+  top: 1%;
+  left: 2%;
   z-index: 10;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -29,7 +29,7 @@
   padding-left: 50px;
   padding-top: 10px;
   padding-bottom: 10px;
-  font-size: 20px;
+  font-size: 2vw;
 }
 .sliderWrapper .btn-primary:hover,
 .sliderWrapper .btn-primary:visited,
@@ -42,7 +42,7 @@
   padding-left: 50px;
   padding-top: 10px;
   padding-bottom: 10px;
-  font-size: 20px;
+  font-size: 2vw;
 }
 
 .sliderWrapper .carousel-control-next-icon {
@@ -50,4 +50,17 @@
 }
 .sliderWrapper .carousel-control-prev-icon {
   display: none;
+}
+
+.slideLogo {
+  width: 60%;
+}
+
+@media only screen and (max-width: 550px) {
+}
+
+@media only screen and (max-width: 1070px) {
+  .sliderWrapper .carousel-indicators {
+    display: none;
+  }
 }

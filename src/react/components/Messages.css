@@ -1,13 +1,10 @@
-.messagesWrapper {
-  display: flex;
-}
 .messageColumn {
   background-color: lightgrey;
   margin: 10px;
   padding: 20px;
   border-radius: 1em;
-  flex-basis: 33.3%;
-  max-width: 33.3%;
+  flex-basis: 33%;
+  max-width: 33%;
 }
 .messageFeedWrapper {
   padding-left: 5px;
@@ -38,13 +35,15 @@
 }
 
 .firstMessageColumn {
-  flex-basis: 33.3%;
+  flex-basis: 33%;
+  min-width: 33%;
 }
+
 .postMessageColumn {
   background-color: lightgrey;
   margin: 10px;
   padding: 20px;
-  height: 350px;
+  height: 357px;
   border-radius: 1em;
 }
 textarea {
@@ -56,4 +55,19 @@ textarea {
 .likesCount {
   color: red;
   font-weight: bold;
+}
+
+@media only screen and (max-width: 1087px) {
+  .messageColumn {
+    background-color: lightgrey;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 1em;
+    flex-basis: 100%;
+    min-width: 98%;
+  }
+  .firstMessageColumn {
+    flex-basis: 100%;
+    min-width: 100%;
+  }
 }

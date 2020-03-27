@@ -16,9 +16,32 @@ export class Header extends React.Component {
           <Carousel.Item>
             <img className="d-block w-100" src={image1} alt="First slide" />
             <Carousel.Caption>
-              <img src={logoLarge} alt="logo" />
+              <img src={logoLarge} alt="logo" className="slideLogo" />
               <h3 className="slideHeader">READY TO QUIT?</h3>
-              <p>
+              <p className="slideParagraph">
+                YOU NEED ANONYMOUS SUPPORT.
+                <br />
+                QUITTERS GIVES YOU THAT 1 ON 1 SUPPORT TO SUCCEED.
+              </p>
+              <Link to="/register#yourAnchorTag">
+                <Button variant="danger" className="header-button">
+                  JOIN TODAY
+                </Button>
+              </Link>
+              &nbsp;&nbsp;
+              <Link to="/#yourAnchorTag">
+                <Button variant="danger" className="header-button">
+                  LOGIN NOW
+                </Button>
+              </Link>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img className="d-block w-100" src={image2} alt="Third slide" />
+            <Carousel.Caption>
+              <img src={logoLarge} alt="logo" className="slideLogo" />
+              <h3 className="slideHeader">READY TO QUIT?</h3>
+              <p className="slideParagraph">
                 YOU NEED ANONYMOUS SUPPORT.
                 <br />
                 QUITTERS GIVES YOU THAT 1 ON 1 SUPPORT TO SUCCEED.
@@ -28,21 +51,10 @@ export class Header extends React.Component {
                   JOIN TODAY
                 </Button>
               </Link>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img className="d-block w-100" src={image2} alt="Third slide" />
-            <Carousel.Caption>
-              <img src={logoLarge} alt="logo" />
-              <h3 className="slideHeader">READY TO QUIT?</h3>
-              <p>
-                YOU NEED ANONYMOUS SUPPORT.
-                <br />
-                QUITTERS GIVES YOU THAT 1 ON 1 SUPPORT TO SUCCEED.
-              </p>
+              &nbsp;&nbsp;
               <Link to="/#yourAnchorTag">
                 <Button variant="danger" className="header-button">
-                  JOIN TODAY
+                  LOGIN NOW
                 </Button>
               </Link>
             </Carousel.Caption>
@@ -51,9 +63,9 @@ export class Header extends React.Component {
             <img className="d-block w-100" src={image3} alt="Third slide" />
 
             <Carousel.Caption>
-              <img src={logoLarge} alt="logo" />
+              <img src={logoLarge} alt="logo" className="slideLogo" />
               <h3 className="slideHeader">READY TO QUIT?</h3>
-              <p>
+              <p className="slideParagraph">
                 YOU NEED ANONYMOUS SUPPORT.
                 <br />
                 QUITTERS GIVES YOU THAT 1 ON 1 SUPPORT TO SUCCEED.
@@ -61,6 +73,12 @@ export class Header extends React.Component {
               <Link to="/#yourAnchorTag">
                 <Button variant="danger" className="header-button">
                   JOIN TODAY
+                </Button>
+              </Link>
+              &nbsp;&nbsp;
+              <Link to="/#yourAnchorTag">
+                <Button variant="danger" className="header-button">
+                  LOGIN NOW
                 </Button>
               </Link>
             </Carousel.Caption>

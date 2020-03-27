@@ -14,14 +14,14 @@ export class Header2 extends React.Component {
           <Carousel.Item>
             <img className="d-block w-100" src={image1} alt="First slide" />
             <Carousel.Caption>
-              <img src={logoLarge} alt="logo" />
+              <img src={logoLarge} alt="logo" className="slideLogo" />
               <h3 className="slideHeader">READY TO QUIT?</h3>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
             <img className="d-block w-100" src={image2} alt="Third slide" />
             <Carousel.Caption>
-              <img src={logoLarge} alt="logo" />
+              <img src={logoLarge} alt="logo" className="slideLogo" />
               <h3 className="slideHeader">READY TO QUIT?</h3>
             </Carousel.Caption>
           </Carousel.Item>
@@ -29,7 +29,7 @@ export class Header2 extends React.Component {
             <img className="d-block w-100" src={image3} alt="Third slide" />
 
             <Carousel.Caption>
-              <img src={logoLarge} alt="logo" />
+              <img src={logoLarge} alt="logo" className="slideLogo" />
               <h3 className="slideHeader">READY TO QUIT?</h3>
             </Carousel.Caption>
           </Carousel.Item>
