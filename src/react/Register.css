@@ -9,6 +9,7 @@
   margin-left: -25px;
   margin-top: 25px;
   margin-bottom: 25px;
+  font-size: 2.5vw;
 }
 
 .btn-danger {
@@ -24,4 +25,18 @@
   color: #fff;
   background-color: #aa1717;
   border-color: #e21b1b;
+}
+@media only screen and (max-width: 600px) {
+  .mainContentWrapperRegister {
+    margin-left: 50px;
+    margin-right: 50px;
+    height: 430px;
+    display: block;
+  }
+  .mainContentWrapperRegister h2 {
+    margin-left: -25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 8vw;
+  }
 }
