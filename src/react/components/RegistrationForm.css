@@ -12,3 +12,28 @@
   float: left;
   padding-bottom: 20px;
 }
+@media only screen and (max-width: 1070px) {
+  .registerFormColumn {
+    background-color: lightgrey;
+    margin: 10px;
+    padding: 20px;
+    width: 50%;
+    border-radius: 1em;
+    float: left;
+    padding-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .registerFormColumn {
+    background-color: lightgrey;
+    margin: 10px;
+    padding: 20px;
+    width: 100%;
+    border-radius: 1em;
+    float: left;
+    padding-bottom: 20px;
+    position: relative;
+    left: -9px;
+  }
+}

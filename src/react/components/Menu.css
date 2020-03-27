@@ -44,3 +44,37 @@
   padding-left: 30px;
   margin-right: 8px;
 }
+
+@media only screen and (max-width: 670px) {
+  #menu-links a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #ffffff40;
+    padding: 9px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: 8px;
+  }
+  #menu-links a:hover {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #ffffff50;
+    padding: 9px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: 8px;
+  }
+  #menu-links {
+    display: flex;
+    padding-left: 1em;
+    position: relative;
+    top: 16px;
+    font-size: 3vw;
+  }
+  .logoImage {
+    margin-top: 12px;
+    max-height: 45px;
+  }
+}

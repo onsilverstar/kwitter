@@ -12,7 +12,7 @@ class Register extends React.Component {
       <>
         <Header />
         <Menu isAuthenticated={this.props.isAuthenticated} />
-        <div className="mainContentWrapperRegister">
+        <div className="mainContentWrapperRegister" id="yourAnchorTag">
           <h2>Register Below to Become a Member.</h2>
           <RegistrationForm />
         </div>
