@@ -1,14 +1,18 @@
 .mainContentWrapperHome {
-  margin-left: 50px;
-  margin-right: 50px;
-  height: 450px;
+  padding-left: 50px;
+  padding-right: 50px;
+  height: 550px;
   display: block;
+  background-image: url(../images/quitting.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .mainContentWrapperHome h2 {
-  margin-left: -25px;
-  margin-top: 25px;
-  margin-bottom: 25px;
+  padding-left: -25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   font-size: 2.5vw;
 }
 .btn-danger {
@@ -27,15 +31,19 @@
 }
 @media only screen and (max-width: 600px) {
   .mainContentWrapperHome {
-    margin-left: 50px;
-    margin-right: 50px;
-    height: 618px;
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 705px;
     display: block;
+    background-image: url(../images/quitting.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
   }
   .mainContentWrapperHome h2 {
-    margin-left: -25px;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    padding-left: -25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     font-size: 8vw;
   }
 }

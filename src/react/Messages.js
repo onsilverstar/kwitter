@@ -16,7 +16,7 @@ class Messages extends React.Component {
       <>
         <Header2 />
         <Menu isAuthenticated={this.props.isAuthenticated} />
-        <div className="mainContentWrapper">
+        <div className="mainContentWrapperMessages">
           <h2 id="messagesHeader">Message Center</h2>
           <div className="messagesWrapper">
             <div className="firstMessageColumn">

@@ -1,13 +1,17 @@
 .mainContentWrapperRegister {
-  margin-left: 50px;
-  margin-right: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
   height: 490px;
   display: block;
+  background-image: url(../images/quitting.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .mainContentWrapperRegister h2 {
   margin-left: -25px;
-  margin-top: 25px;
+  padding-top: 25px;
   margin-bottom: 25px;
   font-size: 2.5vw;
 }
@@ -28,14 +32,14 @@
 }
 @media only screen and (max-width: 600px) {
   .mainContentWrapperRegister {
-    margin-left: 50px;
-    margin-right: 50px;
-    height: 430px;
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 540px;
     display: block;
   }
   .mainContentWrapperRegister h2 {
     margin-left: -25px;
-    margin-top: 25px;
+    padding-top: 25px;
     margin-bottom: 25px;
     font-size: 8vw;
   }

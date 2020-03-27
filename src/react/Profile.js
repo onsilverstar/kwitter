@@ -15,7 +15,7 @@ class Profile extends React.Component {
       <>
         <Header2 />
         <Menu isAuthenticated={this.props.isAuthenticated} />
-        <div className="mainContentWrapper">
+        <div className="mainContentWrapperProfile">
           <h2>Member Profile</h2>
           <div className="profileWrapper">
             <div className="profileColumn">

@@ -46,7 +46,7 @@ export class Header extends React.Component {
                 <br />
                 QUITTERS GIVES YOU THAT 1 ON 1 SUPPORT TO SUCCEED.
               </p>
-              <Link to="/#yourAnchorTag">
+              <Link to="/register#yourAnchorTag">
                 <Button variant="danger" className="header-button">
                   JOIN TODAY
                 </Button>
@@ -70,7 +70,7 @@ export class Header extends React.Component {
                 <br />
                 QUITTERS GIVES YOU THAT 1 ON 1 SUPPORT TO SUCCEED.
               </p>
-              <Link to="/#yourAnchorTag">
+              <Link to="/register#yourAnchorTag">
                 <Button variant="danger" className="header-button">
                   JOIN TODAY
                 </Button>

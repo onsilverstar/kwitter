@@ -1,21 +1,25 @@
-.mainContentWrapper {
-  margin-left: 50px;
-  margin-right: 50px;
+.mainContentWrapperProfile {
+  padding-left: 50px;
+  padding-right: 50px;
   display: block;
+  background-image: url(../images/win.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 975px;
 }
 
-.mainContentWrapper h2 {
-  margin-left: -25px;
-  margin-top: 25px;
-  margin-bottom: 25px;
+.mainContentWrapperProfile h2 {
+  padding-top: 25px;
+  padding-bottom: 25px;
   position: relative;
-  left: 36px;
+  left: 10px;
   top: 5px;
   font-size: 4vw;
 }
 .profileWrapper {
   display: flex;
-  margin-right: 3%;
+  padding-right: 3%;
 }
 .profileColumn {
   background-color: lightgrey;
@@ -24,6 +28,8 @@
   flex-basis: 50%;
   border-radius: 1em;
   min-width: 50%;
+  border: 1px solid #a9a1a1;
+  box-shadow: 2px 2px 2px #999;
 }
 .btn-danger {
   color: #fff;
@@ -39,13 +45,16 @@
   background-color: #aa1717;
   border-color: #e21b1b;
 }
-.mainContentWrapper .h3,
-.mainContentWrapper h3 {
+.mainContentWrapperProfile .h3,
+.mainContentWrapperProfile h3 {
   font-size: 3vw;
 }
-.mainContentWrapper .h4,
-.mainContentWrapper h4 {
+.mainContentWrapperProfile .h4,
+.mainContentWrapperProfile h4 {
   font-size: 2.5vw;
+}
+.mainContentWrapperProfile button {
+  font-size: 1.5vw;
 }
 
 @media only screen and (max-width: 780px) {
@@ -54,15 +63,28 @@
     flex-direction: column;
     margin-right: 0;
   }
-  .mainContentWrapper h2 {
+  .mainContentWrapperProfile h2 {
     font-size: 6vw;
   }
-  .mainContentWrapper .h3,
-  .mainContentWrapper h3 {
+  .mainContentWrapperProfile .h3,
+  .mainContentWrapperProfile h3 {
     font-size: 5vw;
   }
-  .mainContentWrapper .h4,
-  .mainContentWrapper h4 {
+  .mainContentWrapperProfile .h4,
+  .mainContentWrapperProfile h4 {
     font-size: 3.5vw;
+  }
+  .mainContentWrapperProfile {
+    padding-left: 50px;
+    padding-right: 50px;
+    display: block;
+    background-image: url(../images/win.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 1160px;
+  }
+  .mainContentWrapperProfile button {
+    font-size: 2.5vw;
   }
 }
