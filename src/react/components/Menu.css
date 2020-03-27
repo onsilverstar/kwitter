@@ -70,11 +70,22 @@
     display: flex;
     padding-left: 1em;
     position: relative;
-    top: 16px;
-    font-size: 3vw;
+    top: 13px;
+    font-size: 2vw;
   }
   .logoImage {
     margin-top: 12px;
-    max-height: 45px;
+    max-height: 35px;
+  }
+  #menu {
+    background-image: linear-gradient(black, lightgrey);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 1em;
+    height: 55px;
+    margin-bottom: 10px;
+    border-top: solid #888 1px;
+    border-bottom: solid #888 1px;
   }
 }
