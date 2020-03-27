@@ -64,7 +64,7 @@ textarea {
     padding: 20px;
     border-radius: 1em;
     flex-basis: 100%;
-    min-width: 98%;
+    min-width: 95%;
   }
   .firstMessageColumn {
     flex-basis: 100%;
