@@ -54,3 +54,27 @@
 .slideLogo {
   width: 60%;
 }
+@media only screen and (max-width: 800px) {
+  .sliderWrapper .header-button {
+    color: #fff;
+    background-color: #e21b1b;
+    border-color: #aa1717;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 3vw;
+  }
+  .sliderWrapper .header-button:hover,
+  .sliderWrapper .header-button:visited,
+  .sliderWrapper .header-button:focus {
+    color: #fff;
+    background-color: #aa1717;
+    border-color: #e21b1b;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 3vw;
+  }
+}
