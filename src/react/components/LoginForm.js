@@ -22,7 +22,7 @@ class LoginForm extends React.Component {
     const { loading, error } = this.props;
     return (
       <div className="loginFormColumn">
-        <h3>Please Login Below</h3>
+        <h3>Login Below</h3>
         <form id="login-form" onSubmit={this.handleLogin}>
           <label htmlFor="username">Username</label>
           <input

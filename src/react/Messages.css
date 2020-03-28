@@ -1,31 +1,36 @@
-.mainContentWrapper {
-  margin-left: 50px;
-  margin-right: 50px;
+.mainContentWrapperMessages {
+  padding-left: 50px;
+  padding-right: 50px;
   display: block;
+  background-image: url(../images/friends.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 965px;
 }
 .messagesWrapper {
   display: flex;
 }
 
-.mainContentWrapper h2 {
-  margin-left: -25px;
-  margin-top: 25px;
-  margin-bottom: 25px;
+.mainContentWrapperMessages h2 {
+  padding-left: -25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   font-size: 4vw;
 }
-.mainContentWrapper .h3,
-.mainContentWrapper h3 {
+.mainContentWrapperMessages .h3,
+.mainContentWrapperMessages h3 {
   font-size: 3vw;
 }
-.mainContentWrapper .h4,
-.mainContentWrapper h4 {
+.mainContentWrapperMessages .h4,
+.mainContentWrapperMessages h4 {
   font-size: 2.5vw;
 }
 
 .messageFeedMessage h2 {
-  margin-left: -38px;
-  margin-top: 0px;
-  margin-bottom: 13px;
+  padding-left: -2px;
+  padding-top: 0px;
+  padding-bottom: 13px;
   font-size: 2.5vw;
 }
 
@@ -34,15 +39,25 @@
     display: flex;
     flex-direction: column;
   }
-  .mainContentWrapper h2 {
+  .mainContentWrapperMessages h2 {
     font-size: 6vw;
   }
-  .mainContentWrapper .h3,
-  .mainContentWrapper h3 {
+  .mainContentWrapperMessages .h3,
+  .mainContentWrapperMessages h3 {
     font-size: 5vw;
   }
-  .mainContentWrapper .h4,
-  .mainContentWrapper h4 {
+  .mainContentWrapperMessages .h4,
+  .mainContentWrapperMessages h4 {
     font-size: 3.5vw;
+  }
+  .mainContentWrapperMessages {
+    padding-left: 50px;
+    padding-right: 50px;
+    display: block;
+    background-image: url(../images/friends.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 2465px;
   }
 }

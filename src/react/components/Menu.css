@@ -5,7 +5,7 @@
   align-items: flex-start;
   padding: 0 1em;
   height: 70px;
-  margin-bottom: 10px;
+  padding-bottom: 10px;
   border-top: solid #888 1px;
   border-bottom: solid #888 1px;
 }
@@ -84,7 +84,7 @@
     align-items: flex-start;
     padding: 0 1em;
     height: 55px;
-    margin-bottom: 10px;
+    padding-bottom: 10px;
     border-top: solid #888 1px;
     border-bottom: solid #888 1px;
   }
